@@ -1,0 +1,10 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include tablet {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

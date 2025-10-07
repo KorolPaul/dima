@@ -1,0 +1,15 @@
+.logo {
+    display: block;
+    width: 78px;
+    transform: translate(-10px, -19px);
+    @include desktop {
+        flex-shrink: 0;
+        width: 120px;
+        transform: translate(-20px, 0);
+    }
+
+    &_image {
+        display: block;
+        width: 100%;
+    }
+}

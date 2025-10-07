@@ -1,0 +1,8 @@
+---
+import Project from './Project.astro';
+const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
+---
+
+<div class="projects">
+	{posts.map(post => <Project title={post.frontmatter.title} thumbnail={post.frontmatter.thumbnail} />)}
+</div>
