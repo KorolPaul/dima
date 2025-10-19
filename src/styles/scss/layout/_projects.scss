@@ -1,10 +1,12 @@
 .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    @include tablet {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: repeat(5, 1fr);
-    }
+  gap: 16px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

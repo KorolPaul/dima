@@ -4,5 +4,36 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
 ---
 
 <div class="projects">
-	{posts.map(post => <Project title={post.frontmatter.title} thumbnail={post.frontmatter.thumbnail} />)}
+	{posts.map(post => <Project title={post.frontmatter.title} thumbnail={post.frontmatter.thumbnail} content={post.compiledContent()} />)}
 </div>
+
+<div class="popup">
+  <div class="fade js-popup-toggle"></div>
+  <button class="popup_close js-popup-toggle"></button>
+  <div class="popup_content js-popup-content">
+
+  </div>
+</div>
+
+<script>
+  const popupContent = document.querySelector('.js-popup-content');
+  const projectCards = document.querySelectorAll('.project');
+
+  function togglePopup(e) {
+    e?.preventDefault();
+    document.body.classList.toggle('popup-opened');
+  }
+
+  document.querySelectorAll('js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));
+
+  function openProject(e) {
+    const content = e.currentTarget.querySelector('.project_content')?.innerHTML;
+    if (content && popupContent) {
+      popupContent.innerHTML = content;
+      togglePopup();
+    }
+  }
+
+  projectCards.forEach((el) => el.addEventListener('click', openProject));
+
+</script>

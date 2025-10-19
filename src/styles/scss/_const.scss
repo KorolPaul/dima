@@ -1,22 +1,23 @@
-$img: "/img";
+$img: "/public/images";
 
-$color: #141418;
+$color: #000;
 $cLight: #F5F5F5;
+$cBlue: #0350E0;
 $cGray: #B0B0BF;
 $cGrayDark: #787891;
 $cBright: #CDF52D;
-$cGreen: #ADD60A;
+$cGreen: #D1FE17;
 $cGreenDark: #7E9C07;
 $cPurple: #BF9FFF;
 $cCard: #131218;
 
 $font-family: 'Gothic No60', helvetica, arial;
 
-$font-size: 20px;
-$font-size__small: 15px;
+$font-size: 16px;
+$font-size__small: 20px;
 
 $max-width: 1664px;
-$indent: 32px;
+$indent: 16px;
 
 // easings
 $easingSmooth: cubic-bezier(0.38, 0.005, 0.215, 1);

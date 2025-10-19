@@ -1,3 +1,18 @@
 .project {
-    
+  border-radius: 12px;
+  overflow: hidden;
+  transform-origin: center;
+  transition: .2s $easing transform;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &_image {
+    width: 100%;
+  }
+
+  &_content {
+    display: none;
+  }
 }

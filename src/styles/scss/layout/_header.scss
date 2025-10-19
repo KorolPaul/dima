@@ -1,114 +1,16 @@
 .header {
-    @include layout;
-    left: 0;
-    right: 0;
-    top: -4px;
-    z-index: 11;
-    position: fixed;
-    // backdrop-filter: blur(10px);
-    left: 50%;
-    width: 100%;
-    box-sizing: border-box;
-    transform: translateX(-50%);
-    @include desktop {
-        max-width: $max-width;
-        top: -16px;
-    }
+  left: $indent;
+  right: $indent;
+  top: $indent;
+  z-index: 11;
+  position: fixed;
+  box-sizing: border-box;
 
-    &::before {
-        content: '';
-        border-radius: 24px;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        border: 1px solid #B0B0BF26;
-        background: rgba(20, 20, 24, 0.65);
-        position: absolute;
-        top: 16px;
-        bottom: 20px;
-        left: 8px;
-        right: 8px;
-        backdrop-filter: blur(5px);
-        @include desktop {
-            border-radius: 34px;
-            top: 33px;
-            bottom: 0;
-            left: 8px;
-            right: 8px;
-        }
-    }
-
-
-    &_bg-top,
-    &_bg-bottom {
-      position: absolute;
-      left: 50%;
-      height: 3px;
-      transform: translateX(-50%);
-      display: none;
-      @include desktop {
-        display: block;
-        height: 5px;
-      }
-
-      &__mobile {
-        display: block;
-        @include desktop {
-          display: none;
-        }
-      }
-
-    }
-
-    &_bg-top {
-      top: 15px;
-      @include desktop {
-          top: 31px;
-      }
-    }
-
-    &_bg-bottom {
-      bottom: 19px;
-      @include desktop {
-        bottom: -1px;
-      }
-    }
-
-    .layout-without-header & {
-        position: sticky;
-        transform: none;
-        top: 0;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        margin-bottom: -111px;
-        @include desktop {
-            top: -16px;
-            margin-bottom: -152px;
-        }
-    }
-
-    &_holder {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        min-height: 72px;
-        padding-top: 32px;
-        gap: 30px;
-        @include desktop {
-            align-items: center;
-        }
-    }
-    &_menu-wrapper {
-        display: flex;
-        gap: 150px;
-        align-items: center;
-        position: relative;
-        min-height: 19px;
-        top: -8px;
-        padding-right: 140px;
-        @include tablet {
-            padding-right: 145px;
-            gap:100px;
-            top: 0;
-        }
-    }
+  &_holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 15px 18px;
+  }
 }

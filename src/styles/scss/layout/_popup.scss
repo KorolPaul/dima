@@ -1,0 +1,32 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: .2s $easing opacity;
+
+  .popup-opened & {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &_close {
+    @include button-reset;
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    background: $cLight url(#{$img}/close.svg) no-repeat center;
+    margin-left: -36px;
+    z-index: 2;
+    @include tablet {
+      bottom: 32px;
+    }
+  }
+}
