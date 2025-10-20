@@ -7,6 +7,7 @@
   z-index: 10;
   pointer-events: none;
   opacity: 0;
+  color: $color;
   transition: .2s $easing opacity;
 
   .popup-opened & {
@@ -24,9 +25,40 @@
     border-radius: 50%;
     background: $cLight url(#{$img}/close.svg) no-repeat center;
     margin-left: -36px;
-    z-index: 2;
+    z-index: 3;
+    transition: .2s $easing opacity;
     @include tablet {
       bottom: 32px;
     }
+
+    &:hover {
+      background-color: $cLight;
+      opacity: .6;
+    }
+  }
+
+  &_content-wrapper {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    padding: $indent 0 0;
+    max-width: 1136px;
+    overflow: auto;
+    max-height: calc(100dvh - 16px);
+  }
+
+  &_content-scroll {
+    border-radius: 32px;
+    background-color: $cLight;
+  }
+
+  &_content {
+    padding: 48px 0 120px;
+    max-width: 870px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $indent;
+    align-items: center;
   }
 }

@@ -2,16 +2,31 @@
 import Project from './Project.astro';
 const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
 ---
+<script is:inline src="/js/masonry.pkgd.min.js"></script>
 
-<div class="projects">
-	{posts.map(post => <Project title={post.frontmatter.title} thumbnail={post.frontmatter.thumbnail} content={post.compiledContent()} />)}
+<div class="projects" data-masonry='{ "itemSelector": ".project", "columnWidth": 336, "gutter": 16 }'>
+	{posts.map(post =>
+    <Project
+      title={post.frontmatter.title}
+      thumbnail={post.frontmatter.thumbnail}
+      color={post.frontmatter.color}
+      background={post.frontmatter.background}
+      categories={post.frontmatter.categories}
+      content={post.compiledContent()}
+    />
+    )
+  }
 </div>
 
 <div class="popup">
   <div class="fade js-popup-toggle"></div>
   <button class="popup_close js-popup-toggle"></button>
-  <div class="popup_content js-popup-content">
+  <div class="popup_content-wrapper">
+    <div class="popup_content-scroll">
+      <div class="popup_content js-popup-content">
 
+      </div>
+    </div>
   </div>
 </div>
 
@@ -19,17 +34,29 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
   const popupContent = document.querySelector('.js-popup-content');
   const projectCards = document.querySelectorAll('.project');
 
-  function togglePopup(e) {
+  function togglePopup(e?: Event) {
     e?.preventDefault();
+    console.log(e);
+
     document.body.classList.toggle('popup-opened');
   }
 
-  document.querySelectorAll('js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));
+  document.querySelectorAll('.js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));
 
-  function openProject(e) {
-    const content = e.currentTarget.querySelector('.project_content')?.innerHTML;
+  function openProject(e: Event) {
+    const contentElement = e.currentTarget.querySelector('.project_content');
+    const content = contentElement?.innerHTML;
+
     if (content && popupContent) {
       popupContent.innerHTML = content;
+
+      if (contentElement.style.background) {
+        popupContent.parentElement.style.background = contentElement.style.background;
+      }
+
+      if (contentElement.parentElement.style.color) {
+        popupContent.parentElement.style.color = contentElement.parentElement.style.color;
+      }
       togglePopup();
     }
   }

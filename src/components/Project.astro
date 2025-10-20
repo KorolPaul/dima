@@ -1,11 +1,23 @@
 ---
 
-const { title, thumbnail, content } = Astro.props;
+const {
+  title,
+  thumbnail,
+  content,
+  background = '#E4E4E4',
+  color,
+  categories = []
+} = Astro.props;
 
 ---
 
-<div class="project" title={title}>
+<div class="project" title={title} style={color ? `color: ${color};` : undefined}>
 	<img src={thumbnail} alt="" class="project_image">
 
-  <div class="project_content">{content}</div>
+  <div class="project_content" style={background ? `background: ${background};` : undefined}>
+    <Fragment set:html={content}/>
+    <div class="project_categories">
+      {categories.map((el: string) => <a href="#" class="project_category">{el}</a>)}
+    </div>
+  </div>
 </div>
