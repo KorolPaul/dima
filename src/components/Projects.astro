@@ -23,7 +23,11 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
   <button class="popup_close js-popup-toggle"></button>
   <div class="popup_content-wrapper">
     <div class="popup_content-scroll">
+      <div id="viewer" style="height: 500px; width: 100%"></div>
+
+
       <div class="popup_content js-popup-content">
+
 
       </div>
     </div>
@@ -62,5 +66,21 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
   }
 
   projectCards.forEach((el) => el.addEventListener('click', openProject));
+
+
+  const modelPlayer = window.Js3dModelViewer
+  const viewerElement = document.getElementById('viewer')
+
+  const opts = {
+    grid: false,
+    trackball: false,
+    background: 'rgb(100, 100, 100)',
+  }
+
+  const scene = modelPlayer.prepareScene(viewerElement, opts)
+  modelPlayer.loadGlb(
+    scene,
+    '/images/projects/1/wild_west_bank.glb'
+  )
 
 </script>
