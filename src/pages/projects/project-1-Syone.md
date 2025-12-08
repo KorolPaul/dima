@@ -1,15 +1,20 @@
 ---
-title: 'Web and mobile cryptogames PVP project in Wild west setting with whiskey'
+title: 'Syone'
 thumbnail: '/images/projects/1.jpg' ##Привью проекта на главную, складывать в public/images/project
 background: '#583FF5'
 color: '#fff'
-categories: ['ИИ решения', 'Логотипы', 'Сайты']
+categories: ['Web', 'Games', '3d']
 ---
 
-<img src="/images/projects/1/1.png" alt="" />
-<img src="/images/projects/1/2.png" alt="" />
-<img src="/images/projects/1/3.png" alt="" />
-<img src="/images/projects/1/4.png" alt="" />
-<video src="/images/projects/1/4.mp4" alt="" />
+<img src="/images/projects/1/1.webp" alt="" />
+<img src="/images/projects/1/2.webp" alt="" />
+<video src="/images/projects/1/3.webm" alt="" />
+<img src="/images/projects/1/4.webp" alt="" />
+<video src="/images/projects/1/5.webm" alt="" />
+<video src="/images/projects/1/6.webm" alt="" />
+<img src="/images/projects/1/7.png" alt="" />
+<img src="/images/projects/1/8.png" alt="" />
 
-Принт на одежду для FUR FUR сезон 2025 года этого года
+
+PVP project for web and mobile crypto games set in a Wild West-inspired world, with whiskey and blackjack.
+
