@@ -10,6 +10,7 @@ categories: ['Game', 'Logo', 'AI',]
 <video src="/images/projects/4-AI solutions/2-betman.webm" alt="" />
 <video src="/images/projects/4-AI solutions/3-forge.webm" alt="" />
 <video src="/images/projects/4-AI solutions/4-bbc-food.webm" alt="" />
+<video src="/images/projects/4-AI solutions/5-characters.mp4" alt="" />
 
 
 I harness the power of artificial intelligence—paired with open-source tools—to craft compelling videos, dynamic characters, and distinctive brand identities, advertising and game art.
