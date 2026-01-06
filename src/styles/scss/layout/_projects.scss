@@ -1,18 +1,9 @@
 .projects {
-  gap: 16px;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(2, 1fr);
-  @include tablet {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @include desktop {
-    grid-template-columns: repeat(5, 1fr);
-  }
+  padding: 0 16px;
 
-  & > div {
-    @include tablet {
-      width: 336px;
-    }
+  &_holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
   }
 }

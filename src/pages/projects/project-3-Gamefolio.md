@@ -1,26 +1,35 @@
 ---
 title: 'Gamefolio'
-thumbnail: '/images/projects/3-Gamefolio.jpg'
-background: '#1A1717'
-color: '#fff'
-categories: ['Game', 'Logo', 'AI',]
+thumbnail: '/images/projects/main/cards/3-gamefolio/logo.svg'
+background: '#191717'
+color: '#A5FCFA'
 ---
+<h2 class="project_description">With over a decade of experience in the game industry, I’ve contributed to projects ranging from hyper-casual titles to large scale online games.</h2>
+<div class="columns">
+  <video src="/images/projects/3-gamefolio/1-forge.webm" muted autoplay playsinline loop></video>
+  <video src="/images/projects/3-gamefolio/2-mahjong.webm" muted autoplay playsinline loop></video>
+</div>
+<div class="columns">
+  <video src="/images/projects/3-gamefolio/3-Busy Brain.webm" muted autoplay playsinline loop></video>
+  <img src="/images/projects/3-gamefolio/4-match-out.png" alt="" loading="lazy" />
+  <img src="/images/projects/3-gamefolio/5-bubble-buddy.png" alt="" loading="lazy" />
+  <img src="/images/projects/3-gamefolio/6-tile-star.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/3-gamefolio/7-games.png" alt="" loading="lazy" />
+  <img src="/images/projects/3-gamefolio/8-games.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <video src="/images/projects/3-gamefolio/9-syone.mp4" muted autoplay playsinline loop></video>
+  <video src="/images/projects/3-gamefolio/10-excalibur.webm" muted autoplay playsinline loop></video>
+</div>
+<div class="columns">
+  <video src="/images/projects/3-gamefolio/11-ship.webm" muted autoplay playsinline loop></video>
+  <video src="/images/projects/3-gamefolio/12-wot.webm" muted autoplay playsinline loop></video>
+</div>
+<div class="columns">
+  <video src="/images/projects/3-gamefolio/13-battle.webm" muted autoplay playsinline loop></video>
+  <img src="/images/projects/3-gamefolio/14-tank-wars.png" alt="" loading="lazy" />
+</div>
 
-<video src="/images/projects/3-Gamefolio/1-forge.webm" alt="" />
-<video src="/images/projects/3-Gamefolio/2-mahjong.webm" alt="" />
-<video src="/images/projects/3-Gamefolio/3-Busy Brain.webm" alt="" />
-<img src="/images/projects/3-Gamefolio/4-match-out.png" alt="" />
-<img src="/images/projects/3-Gamefolio/5-bubble-buddy.png" alt="" />
-<img src="/images/projects/3-Gamefolio/6-tile-star.png" alt="" />
-<img src="/images/projects/3-Gamefolio/7-games.png" alt="" />
-<img src="/images/projects/3-Gamefolio/8-games.png" alt="" />
-<video src="/images/projects/3-Gamefolio/9-syone.mp4" alt="" />
-<video src="/images/projects/3-Gamefolio/10-excalibur.webm" alt="" />
-<video src="/images/projects/3-Gamefolio/11-ship.webm" alt="" />
-<video src="/images/projects/3-Gamefolio/12-wot.webm" alt="" />
-<video src="/images/projects/3-Gamefolio/13-battle.webm" alt="" />
-<img src="/images/projects/3-Gamefolio/14-tank-wars.png" alt="" />
-
-
-With over a decade of experience in the game industry, I’ve contributed to projects ranging from hyper-casual titles to large scale online games.
 

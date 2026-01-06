@@ -1,16 +1,21 @@
 .header {
   left: $indent;
   right: $indent;
-  top: $indent;
+  top: 56px;
   z-index: 11;
   position: fixed;
   box-sizing: border-box;
+  mix-blend-mode: difference;
+  @include tablet {
+    top: 10px;
+  }
 
   &_holder {
+    @include layout;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
-    padding: 15px 18px;
   }
 }

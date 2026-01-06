@@ -3,13 +3,14 @@ html {
 }
 
 body {
-  color: $cLight;
-  background: $color;
+  color: $color;
+  background: #fff;
   font: #{$font-size__small}/1.4 $font-family;
-  padding: 16px;
+  padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
   min-height: 100dvh;
+  letter-spacing: -3%;
   @include desktop {
     font-size: $font-size;
     line-height: 1.25;
@@ -24,7 +25,7 @@ a {
 
   &:hover,
   &.hover {
-    text-decoration: underline;
+    text-decoration: none;
     outline: none;
   }
 

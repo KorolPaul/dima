@@ -4,18 +4,20 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
 ---
 <script is:inline src="/js/masonry.pkgd.min.js"></script>
 
-<div class="projects" data-masonry='{ "itemSelector": ".project", "columnWidth": 336, "gutter": 16 }'>
-	{posts.map(post =>
-    <Project
-      title={post.frontmatter.title}
-      thumbnail={post.frontmatter.thumbnail}
-      color={post.frontmatter.color}
-      background={post.frontmatter.background}
-      categories={post.frontmatter.categories}
-      content={post.compiledContent()}
-    />
-    )
-  }
+<div class="projects">
+  <div class="projects_holder">
+    {posts.map(post =>
+      <Project
+        title={post.frontmatter.title}
+        thumbnail={post.frontmatter.thumbnail}
+        color={post.frontmatter.color}
+        background={post.frontmatter.background}
+        categories={post.frontmatter.categories}
+        content={post.compiledContent()}
+      />
+      )
+    }
+  </div>
 </div>
 
 <div class="popup">
@@ -35,7 +37,6 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
 </div>
 
 <script>
-  const popupContent = document.querySelector('.js-popup-content');
   const projectCards = document.querySelectorAll('.project');
 
   function togglePopup(e?: Event) {
@@ -48,21 +49,7 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
   document.querySelectorAll('.js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));
 
   function openProject(e: Event) {
-    const contentElement = e.currentTarget.querySelector('.project_content');
-    const content = contentElement?.innerHTML;
-
-    if (content && popupContent) {
-      popupContent.innerHTML = content;
-
-      if (contentElement.style.background) {
-        popupContent.parentElement.style.background = contentElement.style.background;
-      }
-
-      if (contentElement.parentElement.style.color) {
-        popupContent.parentElement.style.color = contentElement.parentElement.style.color;
-      }
-      togglePopup();
-    }
+    e.currentTarget.classList.add('opened');
   }
 
   projectCards.forEach((el) => el.addEventListener('click', openProject));

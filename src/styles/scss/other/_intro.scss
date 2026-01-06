@@ -1,0 +1,34 @@
+.intro {
+  margin-bottom: 24px;
+
+  &_title {
+    padding: 0 16px 40px;
+    text-align: center;
+    font-weight: 400;
+    @include tablet {
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    span {
+      font-family: $font-family-paradigm;
+      font-weight: 300;
+    }
+  }
+
+  &_line {
+    padding: 16px 0 0;
+    @include tablet {
+      padding-top: 48px;
+    }
+  }
+
+  &_logos {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    @include tablet {
+      gap: 56px;
+    }
+  }
+}

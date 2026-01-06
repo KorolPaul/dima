@@ -5,19 +5,17 @@ const {
   thumbnail,
   content,
   background = '#E4E4E4',
-  color,
-  categories = []
+  color = '#fff',
+  iconWithoutIndent = false,
 } = Astro.props;
 
 ---
 
-<div class="project" title={title} style={color ? `color: ${color};` : undefined}>
-	<img src={thumbnail} alt="" class="project_image">
+<div class="project" title={title} style={`color: ${color}; background-color: ${background}`}>
+  {iconWithoutIndent.toString()}
+	<img src={thumbnail} alt="" class={`project_image ${iconWithoutIndent ? 'project_image__without-indent' : ''}`}>
 
-  <div class="project_content" style={background ? `background: ${background};` : undefined}>
+  <div class="project_content">
     <Fragment set:html={content}/>
-    <div class="project_categories">
-      {categories.map((el: string) => <a href="#" class="project_category">{el}</a>)}
-    </div>
   </div>
 </div>

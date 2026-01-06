@@ -1,16 +1,20 @@
-.menu {
+.socials {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
   gap: 12px;
-  z-index: 10;
+  position: fixed;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  z-index: 2;
+  mix-blend-mode: difference;
 
   &_link {
+    color: #fff;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 32px;
     font-weight: 700;
-    color: $cLight;
-    text-decoration: none;
 
     &:hover {
       opacity: .6;

@@ -1,39 +1,59 @@
 ---
 title: 'Logofolio'
-thumbnail: '/images/projects/2-Logofolio.jpg'
+thumbnail: '/images/projects/main/cards/2-logofolio/logo.svg'
 background: '#F4F3EA'
 color: '#fff'
-categories: ['Brand', 'Logo', 'AI']
 ---
 
-<img src="/images/projects/2-Logofolio/01.png" alt="" />
-<img src="/images/projects/2-Logofolio/02.png" alt="" />
-<img src="/images/projects/2-Logofolio/03.png" alt="" />
-<img src="/images/projects/2-Logofolio/04.png" alt="" />
-<img src="/images/projects/2-Logofolio/05.png" alt="" />
-<img src="/images/projects/2-Logofolio/06.png" alt="" />
-<img src="/images/projects/2-Logofolio/07.png" alt="" />
-<img src="/images/projects/2-Logofolio/08.png" alt="" />
-<img src="/images/projects/2-Logofolio/09.png" alt="" />
-<img src="/images/projects/2-Logofolio/10.png" alt="" />
-<img src="/images/projects/2-Logofolio/11.png" alt="" />
-<img src="/images/projects/2-Logofolio/12.png" alt="" />
-<img src="/images/projects/2-Logofolio/13.png" alt="" />
-<img src="/images/projects/2-Logofolio/14.png" alt="" />
-<img src="/images/projects/2-Logofolio/15.png" alt="" />
-<img src="/images/projects/2-Logofolio/16.png" alt="" />
-<img src="/images/projects/2-Logofolio/17.png" alt="" />
-<img src="/images/projects/2-Logofolio/18.png" alt="" />
-<img src="/images/projects/2-Logofolio/19.png" alt="" />
-<img src="/images/projects/2-Logofolio/20.png" alt="" />
-<img src="/images/projects/2-Logofolio/21.png" alt="" />
-<img src="/images/projects/2-Logofolio/22.png" alt="" />
-<img src="/images/projects/2-Logofolio/23.png" alt="" />
-<img src="/images/projects/2-Logofolio/24.png" alt="" />
-<img src="/images/projects/2-Logofolio/25.png" alt="" />
-<img src="/images/projects/2-Logofolio/26.png" alt="" />
-<img src="/images/projects/2-Logofolio/27.png" alt="" />
-<img src="/images/projects/2-Logofolio/28.png" alt="" />
+<div class="columns">
+  <img src="/images/projects/2-logofolio/01.png" alt="" />
+  <img src="/images/projects/2-logofolio/02.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/03.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/04.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/2-logofolio/05.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/06.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/07.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/08.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/2-logofolio/09.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/10.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/11.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/12.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/2-logofolio/13.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/14.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/15.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/16.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/2-logofolio/17.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/18.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/19.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/20.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/2-logofolio/21.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/22.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/23.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/24.png" alt="" loading="lazy" />
+</div>
+<div class="columns">
+  <img src="/images/projects/2-logofolio/25.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/26.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/27.png" alt="" loading="lazy" />
+  <img src="/images/projects/2-logofolio/28.png" alt="" loading="lazy" />
+</div>
+
+
+
+
+
+
+
 
 
 
