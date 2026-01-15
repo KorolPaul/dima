@@ -3,9 +3,7 @@
   overflow: hidden;
   transform-origin: center;
   transition: .2s $easing transform,
-              1s $easing padding,
-              1s $easing max-height;
-  max-height: 256px;
+              1s $easing padding;
   width: 100%;
   overflow: hidden;
   padding: 28px 16px;
@@ -20,8 +18,18 @@
     width: 40%;
   }
 
-  &.opened {
-    max-height: 10000px;
+  &__mini {
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      height: 256px;
+    }
+
+    &.project__align-top {
+      align-items: flex-start;
+    }
   }
 
   &_image {
@@ -106,5 +114,33 @@
     @include tablet {
       max-width: 60%;
     }
+  }
+
+  &_more {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 20px;
+    translate: -50% -50%;
+    opacity: 0;
+    transition: .2s $easing opacity,
+                .3s $easing background-color,
+                .2s $easing color;;
+
+    .project:hover & {
+      opacity: 1;
+    }
+
+    span {
+      font-family: $font-family-paradigm;
+      font-size: 24px;
+    }
+  }
+
+  &_thumbail-video {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% 50%;
   }
 }

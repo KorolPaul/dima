@@ -1,0 +1,73 @@
+.projects-list {
+  @include layout;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include tablet {
+    padding-top: 120px;
+    padding-bottom: 144px;
+  }
+
+  &_holder {
+    display: flex;
+    flex-direction: column;
+    gap: 74px;
+    @include tablet {
+      gap: 144px;
+    }
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+
+  &_item-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    @include tablet {
+      width: 20%;
+      min-width: 460px;
+    }
+  }
+
+  &_item-title {
+    font-size: 23px;
+    line-height: 29px;
+    margin: 0;
+    @include tablet {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    span {
+      font-family: $font-family-grit;
+    }
+  }
+
+  &_item-icon {
+    flex-grow: 0;
+  }
+
+  &_item-video {
+    flex-grow: 1;
+    @include tablet {
+      width: 75%;
+      flex-basis: 75%;
+    }
+
+    video {
+      width: 100%;
+    }
+  }
+}

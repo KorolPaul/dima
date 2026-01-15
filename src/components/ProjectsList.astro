@@ -1,0 +1,42 @@
+---
+const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
+---
+<script is:inline src="/js/masonry.pkgd.min.js"></script>
+
+<div class="projects-list">
+  <div class="projects-list_holder">
+  {posts.map(post => (
+      <div class="projects-list_item">
+        <div class="projects-list_item-name">
+          <img class="projects-list_item-icon" src={post.frontmatter.thumbnail}>
+          <h3 class="projects-list_item-title" set:html={post.frontmatter.subtitle} />
+        </div>
+        <div class="projects-list_item-video">
+          <video src={post.frontmatter.thumbnailVideo} muted autoplay playsinline loop></video>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+<script>
+  const projectCards = document.querySelectorAll('.list_item');
+
+  function togglePopup(e?: Event) {
+    e?.preventDefault();
+
+    document.body.classList.toggle('popup-opened');
+  }
+
+  document.querySelectorAll('.js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));
+
+  function openProject(e: Event) {
+    document.body.classList.toggle('popup-opened');
+    document.querySelector('.popup_content')?.scrollTo(0, 0);
+  }
+
+  projectCards.forEach((el) => el.addEventListener('click', openProject));
+
+</script>

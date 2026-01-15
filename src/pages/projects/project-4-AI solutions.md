@@ -1,10 +1,12 @@
 ---
 title: 'AI solutions'
+subtitle: 'I harness the power of <span>AI open source tools for different projects</span>'
 thumbnail: '/images/projects/main/cards/4-ai-solutions/logo.svg'
+thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#1D2B2B'
 color: '#fff'
-categories: ['Game', 'Logo', 'AI',]
 ---
+
 <h2 class="project_description">I harness the power of artificial intelligence—paired with open-source tools—to craft compelling videos, dynamic characters, and distinctive brand identities, advertising and game art.</h2>
 <div class="project_media">
   <img src="/images/projects/4-ai-solutions/1-written.png" alt="" />

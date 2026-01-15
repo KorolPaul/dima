@@ -1,8 +1,8 @@
 ---
 import Project from './Project.astro';
+
 const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
 ---
-<script is:inline src="/js/masonry.pkgd.min.js"></script>
 
 <div class="projects">
   <div class="projects_holder">
@@ -10,64 +10,14 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
       <Project
         title={post.frontmatter.title}
         thumbnail={post.frontmatter.thumbnail}
+        thumbnailVideo={post.frontmatter.thumbnailVideo}
         color={post.frontmatter.color}
         background={post.frontmatter.background}
-        categories={post.frontmatter.categories}
+        iconWithoutIndent={post.frontmatter.iconWithoutIndent}
+        alignTop={post.frontmatter.alignTop}
         content={post.compiledContent()}
       />
       )
     }
   </div>
 </div>
-
-<div class="popup">
-  <div class="fade js-popup-toggle"></div>
-  <button class="popup_close js-popup-toggle"></button>
-  <div class="popup_content-wrapper">
-    <div class="popup_content-scroll">
-      <div id="viewer" style="height: 500px; width: 100%"></div>
-
-
-      <div class="popup_content js-popup-content">
-
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  const projectCards = document.querySelectorAll('.project');
-
-  function togglePopup(e?: Event) {
-    e?.preventDefault();
-    console.log(e);
-
-    document.body.classList.toggle('popup-opened');
-  }
-
-  document.querySelectorAll('.js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));
-
-  function openProject(e: Event) {
-    e.currentTarget.classList.add('opened');
-  }
-
-  projectCards.forEach((el) => el.addEventListener('click', openProject));
-
-
-  const modelPlayer = window.Js3dModelViewer
-  const viewerElement = document.getElementById('viewer')
-
-  const opts = {
-    grid: false,
-    trackball: false,
-    background: 'rgb(100, 100, 100)',
-  }
-
-  const scene = modelPlayer.prepareScene(viewerElement, opts)
-  modelPlayer.loadGlb(
-    scene,
-    '/images/projects/1/wild_west_bank.glb'
-  )
-
-</script>

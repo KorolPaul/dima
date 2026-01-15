@@ -1,9 +1,12 @@
 ---
 title: 'Gamefolio'
+subtitle: 'With over a decade of <span>experience in the game industry</span>'
 thumbnail: '/images/projects/main/cards/3-gamefolio/logo.svg'
+thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#191717'
 color: '#A5FCFA'
 ---
+
 <h2 class="project_description">With over a decade of experience in the game industry, I’ve contributed to projects ranging from hyper-casual titles to large scale online games.</h2>
 <div class="columns">
   <video src="/images/projects/3-gamefolio/1-forge.webm" muted autoplay playsinline loop></video>

@@ -1,6 +1,26 @@
 .projects {
   padding: 0 16px;
 
+
+  .popup & {
+    padding: 0;
+  }
+
+  &__small {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: top center;
+    transition: .5s $easeInCirc opacity,
+                .5s $easeInCirc transform;
+
+    .popup-opened & {
+      pointer-events: all;
+      transform: scale(.9);
+      opacity: 0.8;
+    }
+  }
+
+
   &_holder {
     display: flex;
     flex-wrap: wrap;

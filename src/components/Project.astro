@@ -7,15 +7,20 @@ const {
   background = '#E4E4E4',
   color = '#fff',
   iconWithoutIndent = false,
+  alignTop = false,
+  small,
 } = Astro.props;
 
 ---
 
-<div class="project" title={title} style={`color: ${color}; background-color: ${background}`}>
-  {iconWithoutIndent.toString()}
+<div class={`project ${small ? 'project__mini' : ''} ${alignTop ? 'project__align-top' : ''}`} title={title} style={`color: ${color}; background-color: ${background}`}>
 	<img src={thumbnail} alt="" class={`project_image ${iconWithoutIndent ? 'project_image__without-indent' : ''}`}>
 
-  <div class="project_content">
-    <Fragment set:html={content}/>
-  </div>
+  {small && <button class="project_more">explore <span>case</span></button>}
+
+  {!small && (
+    <div class="project_content">
+      <Fragment set:html={content}/>
+    </div>
+  )}
 </div>

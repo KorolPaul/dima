@@ -1,5 +1,7 @@
 ---
+import Cards from '../components/Cards.astro';
 import Projects from '../components/Projects.astro';
+import ProjectsList from '../components/ProjectsList.astro';
 import Layout from '../layouts/Layout.astro';
 
 import '../styles/scss/style.scss';
@@ -43,7 +45,7 @@ import '../styles/scss/style.scss';
     </marquee>
   </div>
 
-	<Projects />
+	<ProjectsList />
 
   <div class="visionary">
     <img src="/public/images/art-tech.svg" alt="" class="visionary_image">
@@ -52,4 +54,17 @@ import '../styles/scss/style.scss';
       <strong>My experience includes implementing</strong> <span>AI in production</span>, developing brand identities and crafting complex 3D visual solutions.
     </h3>
   </div>
+
+  <Cards />
+
+	<Projects />
+
+  <div class="popup">
+    <div class="fade js-popup-toggle"></div>
+    <button class="popup_close js-popup-toggle">close</button>
+    <div class="popup_content js-popup-content">
+      <Projects />
+    </div>
+  </div>
+
 </Layout>
