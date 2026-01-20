@@ -1,6 +1,6 @@
 ---
 icon: '/images/projects/main/towns.svg'
-color: '#B57357'
+color: '#E06D3B'
 rotation: '0deg'
 ---
 

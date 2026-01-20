@@ -1,6 +1,7 @@
 .projects {
-  padding: 0 16px;
-
+  background: #F2EFEA;
+  position: relative;
+  z-index: 2;
 
   .popup & {
     padding: 0;

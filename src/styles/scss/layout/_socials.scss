@@ -7,22 +7,30 @@
   bottom: 10px;
   left: 12px;
   right: 12px;
-  z-index: 2;
-  mix-blend-mode: difference;
 
   &_link {
+    border-radius: 6px;
+    display: block;
+    background-color: $color;
     color: #fff;
     font-size: 18px;
     line-height: 32px;
     font-weight: 700;
+    mix-blend-mode: difference;
+    position: relative;
+    z-index: 2;
+    padding: 4px 20px;
+    transition: .3s background-color $easing,
+                .3s transform $easing,
+                .3s color $easing;
 
     &:hover {
-      opacity: .6;
       text-decoration: none;
+      background-color: $cPurple;
     }
 
     &:active {
-      opacity: .8;
+      transform: scale(.95);
     }
   }
 }

@@ -1,27 +1,36 @@
 .visionary {
+  padding: 0 16px;
+  background: #F2EFEA;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  gap: 24px;
-  padding: 112px $indent;
+  gap: 16px;
+  padding: 24px $indent 0;
+  position: relative;
+  z-index: 2;
   @include tablet {
-    padding: 160px 0;
+    padding: 32px 28px 0;
   }
 
-  &_text {
-    font-size: 28px;
-    line-height: 32px;
+  &_title {
+    padding: 0 0 80px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
     margin: 0;
     @include tablet {
-      font-size: 56px;
-      line-height: 56px;
-      max-width: 620px;
+      padding-bottom: 144px;
+      font-size: 68px;
+      line-height: 80px;
     }
 
     span {
       font-family: $font-family-paradigm;
       font-weight: 300;
+      font-size: 33px;
+      font-size: 70px;
     }
   }
 }

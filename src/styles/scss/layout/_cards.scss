@@ -1,13 +1,27 @@
-.cards {
-  padding: 80px 0;
-
-  &_holder {
-    @include layout;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
+.cards-wrapper {
+  background: #F2EFEA;
+  position: relative;
+  margin-top: -200px;
+  margin-bottom: -200px;
+  position: relative;
+  z-index: 1;
+  @include tablet {
+    margin-bottom: -400px;
   }
+}
+
+.cards {
+  position: sticky;
+  top: 0;
+  // height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
 }
 
 .card {
@@ -21,9 +35,25 @@
   max-width: 594px;
   box-sizing: border-box;
   text-align: center;
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s $easingSmooth;
   @include tablet {
     padding: 100px 100px 70px;
     gap: 40px;
+    margin-bottom: 24px;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    background: #4caf50;
+    color: white;
+
+    & ~ & {
+      transform: translateY(-65%);
+    }
   }
 
   p {
@@ -39,5 +69,9 @@
     span {
       font-family: $font-family-grit;
     }
+  }
+
+  video {
+    height: 60px;
   }
 }

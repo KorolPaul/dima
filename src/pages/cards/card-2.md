@@ -1,6 +1,6 @@
 ---
 icon: '/images/projects/main/ready.png'
-color: '#575EB5'
+color: '#005EFF'
 rotation: '-2deg'
 ---
 

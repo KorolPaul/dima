@@ -2,8 +2,8 @@
 const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: true }));
 ---
 
-<div class="cards">
-  <div class="cards_holder">
+<div class="cards-wrapper">
+  <div class="cards">
     {posts.map(post =>
       <div class="card" style={`background-color: ${post.frontmatter.color}; rotate: ${post.frontmatter.rotation}`}>
         <img src={post.frontmatter.icon} alt="" />
@@ -13,3 +13,45 @@ const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: tru
     }
   </div>
 </div>
+
+<script>
+  const section = document.querySelector('.cards-wrapper');
+  const cardsContainer = document.querySelector('.cards');
+  const cards = document.querySelectorAll('.card');
+
+  // Настройка: сколько пикселей скролла нужно для переключения одной карточки
+  // Можно использовать window.innerHeight для скролла "по экранам"
+  const stepHeight = window.innerHeight;
+
+  // Устанавливаем высоту родителя:
+  // (кол-во карточек * высоту шага) + еще немного места для плавности
+  section.style.height = `${stepHeight * (cards.length + 1)}px`;
+
+  window.addEventListener('scroll', () => {
+      // Получаем позицию секции относительно верха вьюпорта
+      const sectionTop = section.getBoundingClientRect().top;
+
+      // Вычисляем, сколько пикселей мы проскроллили ВНУТРИ секции.
+      // Так как sectionTop становится отрицательным при скролле вниз, инвертируем его.
+      const scrolledInside = -sectionTop;
+
+      if (scrolledInside < 0) {
+          // Мы еще не дошли до блока
+          cards.forEach(card => card.classList.remove('active'));
+          return;
+      }
+
+      // Перебираем карточки и проверяем, пора ли их активировать
+      cards.forEach((card, index) => {
+          // Порог срабатывания для каждой карточки
+          // +1 чтобы первая карточка активировалась не мгновенно, а чуть проскроллив
+          const threshold = stepHeight * index;
+
+          if (scrolledInside > threshold) {
+              card.classList.add('active');
+          } else {
+              card.classList.remove('active');
+          }
+      });
+  });
+</script>
