@@ -1,12 +1,11 @@
 ---
 const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
 ---
-<script is:inline src="/js/masonry.pkgd.min.js"></script>
 
 <div class="projects-list">
   <div class="projects-list_holder">
   {posts.map(post => (
-      <div class="projects-list_item">
+      <div class="projects-list_item" data-title={post.frontmatter.title}>
         <div class="projects-list_item-name">
           <img class="projects-list_item-icon" src={post.frontmatter.thumbnail}>
           <h3 class="projects-list_item-title" set:html={post.frontmatter.subtitle} />
@@ -22,8 +21,8 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
 
 
 <script>
-  const projectCards = document.querySelectorAll('.list_item');
-
+  const projectCards = document.querySelectorAll('.projects-list_item');
+  console.log(projectCards)
   function togglePopup(e?: Event) {
     e?.preventDefault();
 
@@ -34,7 +33,20 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
 
   function openProject(e: Event) {
     document.body.classList.toggle('popup-opened');
-    document.querySelector('.popup_content')?.scrollTo(0, 0);
+
+    const projectTitle = e.currentTarget.dataset.title;
+    const targetElement = document.querySelector(`.popup_content .project[title="${projectTitle}"]`);
+    console.log(targetElement);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'auto',
+        block: 'start',
+        inline: 'nearest',
+      });
+    }
+
+    // document.querySelector('.popup_content')?.scrollTo(0, 0);
   }
 
   projectCards.forEach((el) => el.addEventListener('click', openProject));

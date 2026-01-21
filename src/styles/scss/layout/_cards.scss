@@ -32,7 +32,7 @@
   border-radius: 12px;
   padding: 50px 36px 44px;
   transform-origin: center;
-  max-width: 594px;
+  max-width: 80^;
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 16px;
@@ -42,6 +42,7 @@
   @include tablet {
     padding: 100px 100px 70px;
     gap: 40px;
+    max-width: 594px;
     margin-bottom: 24px;
   }
 

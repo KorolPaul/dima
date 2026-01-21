@@ -1,0 +1,408 @@
+<section class="showcase willem-header is--loading is--hidden">
+  <div class="willem-loader">
+    <div class="willem__h1">
+      <div class="willem__h1-start">
+        <span class="willem__letter">D</span>
+        <span class="willem__letter">m</span>
+        <span class="willem__letter">i</span>
+        <span class="willem__letter">t</span>
+        <span class="willem__letter">r</span>
+        <span class="willem__letter">y</span>
+      </div>
+      <div class="willem-loader__box">
+        <div class="willem-loader__box-inner">
+          <div class="willem__growing-image">
+            <div class="willem__growing-image-wrap">
+              <video class="willem__cover-image-extra is--1" src="/public/images/projects/main/main_video_loader.mp4" muted loop autoplay playsinline> Your browser does not support the video tag. </video>
+              <video class="willem__cover-image hero-video" src="/public/images/projects/main/main_video.mp4" muted loop playsinline> Your browser does not support the video tag. </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="willem__h1-end">
+        <span class="willem__letter">Z</span>
+        <span class="willem__letter">e</span>
+        <span class="willem__letter">l</span>
+        <span class="willem__letter">i</span>
+        <span class="willem__letter">n</span>
+        <span class="willem__letter">s</span>
+        <span class="willem__letter">k</span>
+        <span class="willem__letter">y</span>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" is:inline></script>
+
+<style>
+  /* Disable Scroll on Loading */
+  main:has(.willem-header.is--loading) {
+    height: 100dvh;
+  }
+
+  .willem-header {
+    color: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Loading: Hidden */
+  .willem-header.is--loading.is--hidden {
+    display: none;
+  }
+
+  .willem-loader {
+    color: #201d1d;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .willem__h1 {
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 3.5em;
+    font-weight: 500;
+    line-height: 1.5;
+    display: flex;
+    position: relative;
+  }
+
+  .willem__h1-start {
+    justify-content: flex-end;
+    width: 3em;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .willem__h1-end {
+    justify-content: flex-start;
+    width: 3.7em;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .willem__letter {
+    display: block;
+    position: relative;
+  }
+
+  .willem__letter-white.is--space {
+    margin-left: 0.25em;
+  }
+
+  .willem-loader__box {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    display: flex;
+    position: relative;
+  }
+
+  .willem-loader__box-inner {
+    justify-content: center;
+    align-items: center;
+    min-width: 2em;
+    height: 95%;
+    display: flex;
+    position: relative;
+  }
+
+  .willem__growing-image {
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .willem__growing-image-wrap {
+    width: 100%;
+    min-width: 1em;
+    height: 100%;
+    position: absolute;
+  }
+
+  .willem__cover-image {
+    pointer-events: none;
+    object-fit: cover;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .willem__cover-image-extra {
+    pointer-events: none;
+    object-fit: cover;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .willem__cover-image-extra.is--1 {
+    z-index: 3;
+  }
+
+  .willem__cover-image-extra.is--2 {
+    z-index: 2;
+  }
+
+  .willem__cover-image-extra.is--3 {
+    z-index: 1;
+  }
+
+  .willem__letter-white {
+    display: block;
+    position: relative;
+  }
+
+  @media screen and (max-width: 991px) {
+    .willem__h1 {
+      font-size: 9em;
+    }
+
+    .willem-nav__links {
+      grid-column-gap: 0em;
+      grid-row-gap: 0em;
+      flex-flow: column;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .willem__h1 {
+      font-size: 5.5em;
+    }
+
+    .willem-nav__start {
+      width: 65%;
+    }
+
+    .willem-nav__end {
+      grid-column-gap: 1.5em;
+      grid-row-gap: 1.5em;
+      flex-flow: column;
+      width: 45%;
+    }
+  }
+</style>
+
+<script>
+  // ------- Osmo [https://osmo.supply/] ------- //
+
+  function initWillemLoadingAnimation() {
+    const container = document.querySelector(".willem-header");
+    const loadingLetter = container.querySelectorAll(".willem__letter");
+    const box = container.querySelectorAll(".willem-loader__box");
+    const growingImage = container.querySelectorAll(".willem__growing-image");
+    const heroVideo = document.querySelector(".hero-video");
+    const headingStart = container.querySelectorAll(".willem__h1-start");
+    const headingEnd = container.querySelectorAll(".willem__h1-end");
+    const coverImageExtra = container.querySelectorAll(".willem__cover-image-extra");
+    const headerLetter = container.querySelectorAll(".willem__letter-white");
+    const navLinks = container.querySelectorAll(".willen-nav a, .osmo-credits__p");
+
+    /* GSAP Timeline */
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "expo.inOut",
+      },
+      onStart: () => {
+        container.classList.remove("is--hidden");
+      },
+    });
+
+    const tl2 = gsap.timeline({
+      defaults: {
+        ease: "expo.inOut",
+      },
+      paused: true,
+    });
+
+    /* Start of Timeline */
+    if (loadingLetter) {
+      tl.from(loadingLetter, {
+        yPercent: 100,
+        stagger: 0.025,
+        duration: 1.25,
+      });
+    }
+
+    if (box.length) {
+      tl.fromTo(
+        box,
+        {
+          width: "0em",
+        },
+        {
+          width: "2em",
+          duration: 1.25,
+        },
+        "< 1.25",
+      );
+    }
+
+    if (box.length) {
+      tl.fromTo(
+        growingImage,
+        {
+          width: "0%",
+        },
+        {
+          width: "100%",
+          duration: 1.25,
+        },
+        "<",
+      );
+    }
+
+    if (headingStart.length) {
+      tl.fromTo(
+        headingStart,
+        {
+          x: "0em",
+        },
+        {
+          x: "-0.05em",
+          duration: 1.25,
+        },
+        "<",
+      );
+    }
+
+    if (headingEnd.length) {
+      tl.fromTo(
+        headingEnd,
+        {
+          x: "0em",
+        },
+        {
+          x: "0.05em",
+          duration: 1.25,
+        },
+        "<",
+      );
+    }
+
+    if (coverImageExtra.length) {
+      tl.fromTo(
+        coverImageExtra,
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+          duration: 0.05,
+          ease: "none",
+          stagger: 0.5,
+        },
+        "-=0.05",
+      );
+    }
+
+    if (growingImage.length) {
+      tl2.to(growingImage, {
+        width: "100vw",
+        height: "100dvh",
+        duration: 2,
+      });
+
+      if (box.length) {
+        tl2.to(
+          box,
+          {
+            width: "115vw",
+            duration: 2,
+          },
+          "<",
+        );
+      }
+
+      if (headerLetter.length) {
+        tl2.from(
+          headerLetter,
+          {
+            yPercent: 100,
+            duration: 1.25,
+            ease: "expo.out",
+            stagger: 0.025,
+          },
+          "< 1.2",
+        );
+      }
+
+      if (navLinks.length) {
+        tl2.from(
+          navLinks,
+          {
+            yPercent: 100,
+            duration: 1.25,
+            ease: "expo.out",
+            stagger: 0.1,
+          },
+          "<",
+        );
+      }
+
+      let introDone = false;
+      let videoReady = false;
+
+      const tryStart = () => {
+        console.log(introDone, videoReady);
+        if (introDone && videoReady) {
+          tl2.play();
+          heroVideo.play();
+        }
+      };
+
+      tl.eventCallback("onComplete", () => {
+        console.log("c1");
+        introDone = true;
+        tryStart();
+      });
+
+      if (heroVideo.readyState >= 2) {
+        console.log("c3");
+        videoReady = true;
+        tryStart();
+      } else {
+        heroVideo.onloadeddata = function () {
+          console.log("c2");
+          videoReady = true;
+          tryStart();
+        };
+      }
+
+      //     heroVideo.addEventListener('loadeddata', () => {
+
+      //     });
+
+      //       heroVideo.addEventListener('canplay', () => {
+      //   console.log('Видео загружено, первый кадр доступен');
+      //          tl2.play();
+
+      // });
+    }
+  }
+
+  // Initialize Willem Loading Animation
+  document.addEventListener("DOMContentLoaded", () => {
+    initWillemLoadingAnimation();
+  });
+</script>

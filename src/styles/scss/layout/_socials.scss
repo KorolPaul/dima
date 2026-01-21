@@ -13,16 +13,19 @@
     display: block;
     background-color: $color;
     color: #fff;
-    font-size: 18px;
     line-height: 32px;
     font-weight: 700;
     mix-blend-mode: difference;
     position: relative;
     z-index: 2;
+    font-size: 0;
     padding: 4px 20px;
     transition: .3s background-color $easing,
                 .3s transform $easing,
                 .3s color $easing;
+    @include tablet {
+      font-size: 18px;
+    }
 
     &:hover {
       text-decoration: none;
@@ -32,5 +35,10 @@
     &:active {
       transform: scale(.95);
     }
+
+  }
+
+  &_link-mobile {
+    font-size: 18px;
   }
 }
