@@ -1,0 +1,10 @@
+.content {
+  position: relative;
+  z-index: 2;
+  padding-top: 48px;
+  background-color: $cLight;
+  margin-top: 100dvh;
+  @include tablet {
+    padding-top: 80px;
+  }
+}

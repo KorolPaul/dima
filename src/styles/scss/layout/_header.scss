@@ -1,9 +1,9 @@
 .header {
   left: $indent;
   right: $indent;
-  top: 56px;
+  top: 52px;
   z-index: 11;
-  position: fixed;
+  position: absolute;
   box-sizing: border-box;
   mix-blend-mode: difference;
   @include tablet {
@@ -11,11 +11,12 @@
   }
 
   &_holder {
-    @include layout;
-    padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     gap: 30px;
+    @include tablet {
+      justify-content: stretch;
+    }
   }
 }

@@ -1,44 +1,44 @@
 .socials {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 12px;
-  position: absolute;
-  bottom: 10px;
-  left: 12px;
-  right: 12px;
+  gap: 4px;
+  @include tablet {
+    flex-direction: row;
+    width: 100%;
+  }
 
   &_link {
     border-radius: 6px;
     display: block;
     background-color: $color;
     color: #fff;
-    line-height: 32px;
-    font-weight: 700;
+    font-size: 22px;
+    font-family: $font-family-grit;
+    line-height: 1;
+    font-weight: 400;
     mix-blend-mode: difference;
     position: relative;
     z-index: 2;
-    font-size: 0;
-    padding: 4px 20px;
-    transition: .3s background-color $easing,
+    padding: 4px 12px 6px;
+    transition: .2s background-color $easing,
                 .3s transform $easing,
                 .3s color $easing;
     @include tablet {
-      font-size: 18px;
+      font-size: 28px;
+      line-height: 30px;
     }
 
     &:hover {
       text-decoration: none;
-      background-color: $cPurple;
+      background-color: $cLight;
+      color: $color;
     }
 
     &:active {
       transform: scale(.95);
     }
 
-  }
-
-  &_link-mobile {
-    font-size: 18px;
   }
 }

@@ -12,50 +12,36 @@ import Filters from '../components/Filters.astro';
     <title>Dmitry Zelinsky</title>
   </head>
   <body>
+    <a class="logo" href="/">
+      Dmitry Zelinsky
+      <span>
+        Ai, interactions, branding
+      </span>
+    </a>
     <header class="header">
       <div class="header_holder">
-        <a class="logo" href="/">
-          Dmitry Zelinsky
-          <div>
-            Ai, interactions, branding
-          </div>
-        </a>
-
-        <nav class="menu">
-          <a href="" class="menu_link">
-            about
+        <div class="socials">
+          <a href="" class="socials_link">
+            dribble
           </a>
-        </nav>
-
+          <a href="" class="socials_link">
+            instagram
+          </a>
+          <a href="" class="socials_link">
+            linkedin
+          </a>
+          <a href="" class="socials_link">
+            tik tok
+          </a>
+          <a href="" class="socials_link">
+            telegram
+          </a>
+          <a href="" class="socials_link">
+            let's chat
+          </a>
+        </div>
       </div>
     </header>
-
-    <div class="socials">
-      <a href="" class="socials_link">
-        dribble
-        <span class="socials_link-mobile">dr</span>
-      </a>
-      <a href="" class="socials_link">
-        instagram
-        <span class="socials_link-mobile">ig</span>
-      </a>
-      <a href="" class="socials_link">
-        linkedin
-        <span class="socials_link-mobile">ln</span>
-      </a>
-      <a href="" class="socials_link">
-        tik tok
-        <span class="socials_link-mobile">tk</span>
-      </a>
-      <a href="" class="socials_link">
-        telegram
-        <span class="socials_link-mobile">tg</span>
-      </a>
-      <a href="" class="socials_link">
-        let's chat
-        <span class="socials_link-mobile">let's chat</span>
-      </a>
-    </div>
 
     <main>
       <slot />
