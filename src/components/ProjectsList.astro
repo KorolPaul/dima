@@ -7,7 +7,7 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
   {posts.map(post => (
       <div class="projects-list_item" data-title={post.frontmatter.title}>
         <div class="projects-list_item-name">
-          <img class="projects-list_item-icon" src={post.frontmatter.thumbnail}>
+          <img class="projects-list_item-icon" src={post.frontmatter.thumbnailSmall}>
           <h3 class="projects-list_item-title" set:html={post.frontmatter.subtitle} />
         </div>
         <div class="projects-list_item-video">
@@ -22,7 +22,9 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
 
 <script>
   const projectCards = document.querySelectorAll('.projects-list_item');
-  console.log(projectCards)
+  const popupWrapper = document.querySelector('.popup-wrapper');
+  const fade = document.querySelector('.fade');
+
   function togglePopup(e?: Event) {
     e?.preventDefault();
 
@@ -35,8 +37,10 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
     document.body.classList.toggle('popup-opened');
 
     const projectTitle = e.currentTarget.dataset.title;
+
     const targetElement = document.querySelector(`.popup_content .project[title="${projectTitle}"]`);
-    console.log(targetElement);
+    const color = targetElement.dataset.color;
+    fade.style.backgroundColor = color;
 
     if (targetElement) {
       targetElement.scrollIntoView({
@@ -45,10 +49,29 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
         inline: 'nearest',
       });
     }
-
-    // document.querySelector('.popup_content')?.scrollTo(0, 0);
   }
 
   projectCards.forEach((el) => el.addEventListener('click', openProject));
+
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const color = entry.target.dataset.color;
+        fade.style.backgroundColor = color;
+      }
+    })
+  }
+
+  const options = {
+    rootMargin: '-30% 0px -30% 0px',
+    threshold: 0,
+  }
+
+  const observer = new IntersectionObserver(observerCallback, options);
+
+  document.querySelectorAll('.popup .project').forEach((el) => {
+    observer.observe(el);
+  });
 
 </script>

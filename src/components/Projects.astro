@@ -1,6 +1,10 @@
 ---
 import Project from './Project.astro';
 
+const {
+  withBackground = false,
+} = Astro.props;
+
 const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
 ---
 
@@ -16,6 +20,7 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
         iconWithoutIndent={post.frontmatter.iconWithoutIndent}
         alignTop={post.frontmatter.alignTop}
         content={post.compiledContent()}
+        withBackground={withBackground}
       />
       )
     }

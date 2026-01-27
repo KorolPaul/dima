@@ -2,6 +2,7 @@
 title: 'Gamefolio'
 subtitle: 'With over a decade of <span>experience in the game industry</span>'
 thumbnail: '/images/projects/main/cards/3-gamefolio/logo.svg'
+thumbnailSmall: '/images/projects/main/cards/3-gamefolio/logo-small.svg'
 thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#191717'
 color: '#A5FCFA'

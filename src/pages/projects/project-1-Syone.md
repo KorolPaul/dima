@@ -2,6 +2,7 @@
 title: 'Syone'
 subtitle: '<span>PVP project for web and</span> mobile crypto games'
 thumbnail: '/images/projects/main/cards/1-syone/logo.svg'
+thumbnailSmall: '/images/projects/main/cards/1-syone/logo-small.svg'
 thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#2A2828'
 color: '#fff'

@@ -2,6 +2,7 @@
 title: 'Logofolio'
 subtitle: '<span>A collections of symbols</span>'
 thumbnail: '/images/projects/main/cards/2-logofolio/logo.svg'
+thumbnailSmall: '/images/projects/main/cards/2-logofolio/logo-small.svg'
 thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#F4F3EA'
 color: '#fff'

@@ -7,7 +7,6 @@
   z-index: 12;
   pointer-events: none;
   transform: translateY(120%);
-  color: $color;
   transition: 1.5s $easeInOutCirc transform .2s;
 
   .popup-opened & {
@@ -26,14 +25,21 @@
     background: $cLight url(#{$img}/close.svg) no-repeat center;
     margin-left: -36px;
     z-index: 3;
-    transition: .2s $easing opacity;
+    transform-origin: center;
+    scale: 1;
+    transition: .2s $easing filter,
+                .2s $easing scale;
     @include tablet {
       bottom: 32px;
     }
 
     &:hover {
+      filter: invert(1);
       background-color: $cLight;
-      opacity: .6;
+    }
+
+    &:active {
+      scale: 0.9;
     }
   }
 
@@ -44,4 +50,8 @@
     z-index: 2;
     overflow: auto;
   }
+}
+
+.popup-wrapper {
+  transition: .3s $easeInOutCirc color;
 }

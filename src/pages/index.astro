@@ -7,8 +7,6 @@ import Layout from '../layouts/Layout.astro';
 
 import '../styles/scss/style.scss';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
@@ -55,14 +53,16 @@ import '../styles/scss/style.scss';
 
     <Cards />
 
-    <Projects />
+    <Projects withBackground />
   </div>
 
-  <div class="popup">
+  <div class="popup-wrapper">
     <div class="fade js-popup-toggle"></div>
-    <button class="popup_close js-popup-toggle">close</button>
-    <div class="popup_content js-popup-content">
-      <Projects />
+    <div class="popup">
+      <button class="popup_close js-popup-toggle"></button>
+      <div class="popup_content js-popup-content">
+        <Projects />
+      </div>
     </div>
   </div>
 

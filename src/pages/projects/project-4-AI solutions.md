@@ -2,6 +2,7 @@
 title: 'AI solutions'
 subtitle: 'I harness the power of <span>AI open source tools for different projects</span>'
 thumbnail: '/images/projects/main/cards/4-ai-solutions/logo.svg'
+thumbnailSmall: '/images/projects/main/cards/4-ai-solutions/logo-small.svg'
 thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#1D2B2B'
 color: '#fff'

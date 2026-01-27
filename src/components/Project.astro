@@ -7,13 +7,19 @@ const {
   background = '#E4E4E4',
   color = '#fff',
   iconWithoutIndent = false,
+  withBackground = false,
   alignTop = false,
   small,
 } = Astro.props;
 
 ---
 
-<div class={`project ${small ? 'project__mini' : ''} ${alignTop ? 'project__align-top' : ''}`} title={title} style={`color: ${color}; background-color: ${background}`}>
+<div
+  class={`project ${small ? 'project__mini' : ''} ${alignTop ? 'project__align-top' : ''}`}
+  title={title}
+  data-color={background}
+  style={`color: ${color}; background-color: ${withBackground ? background: 'transparent'}`}
+>
 	<img src={thumbnail} alt="" class={`project_image ${iconWithoutIndent ? 'project_image__without-indent' : ''}`}>
 
   {small && <button class="project_more">explore <span>case</span></button>}
