@@ -7,11 +7,12 @@
   z-index: 12;
   pointer-events: none;
   transform: translateY(120%);
-  transition: 1.5s $easeInOutCirc transform .2s;
+  transition: 1.5s $easeInOutCirc transform 0s;
 
   .popup-opened & {
     pointer-events: all;
     transform: translateY(0%);
+    transition-delay: .2s;
   }
 
   &_close {

@@ -14,8 +14,8 @@
           <div class="willem-loader__box-inner">
             <div class="willem__growing-image">
               <div class="willem__growing-image-wrap">
-                <video class="willem__cover-image-extra is--1" src="/public/images/projects/main/main_video_loader.mp4" muted loop autoplay playsinline> Your browser does not support the video tag. </video>
-                <video class="willem__cover-image hero-video" src="/public/images/projects/main/main_video.mp4" muted loop playsinline> Your browser does not support the video tag. </video>
+                <video class="willem__cover-image-extra is--1" src="/images/projects/main/main_video_loader.mp4" muted loop autoplay playsinline> Your browser does not support the video tag. </video>
+                <video class="willem__cover-image hero-video" src="/images/projects/main/main_video.mp4" muted loop playsinline> Your browser does not support the video tag. </video>
               </div>
             </div>
           </div>
@@ -79,16 +79,21 @@
 
   .willem__h1-start {
     justify-content: flex-end;
-    width: 3em;
+    width: 3.9em;
     display: flex;
     overflow: hidden;
+    font-size: 120px;
+    letter-spacing: -3%;
   }
 
   .willem__h1-end {
     justify-content: flex-start;
-    width: 3.7em;
+    width: 3.9em;
+    font-size: 122px;
     display: flex;
+    letter-spacing: -3%;
     overflow: hidden;
+    font-family: 'Grit', helvetica, arial;
   }
 
   .willem__letter {
@@ -159,6 +164,7 @@
     left: 0;
   }
 
+
   .willem__cover-image-extra.is--1 {
     z-index: 3;
   }
@@ -228,6 +234,7 @@
       },
       onStart: () => {
         container.classList.remove("is--hidden");
+        container.classList.add("is--start");
       },
     });
 
@@ -330,7 +337,7 @@
         tl2.to(
           box,
           {
-            width: "115vw",
+            width: "calc(100vw + 468px + 475px)",
             duration: 2,
           },
           "<",

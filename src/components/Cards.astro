@@ -6,7 +6,6 @@ const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: tru
   <div class="cards">
     {posts.map(post =>
       <div class="card" style={`background-color: ${post.frontmatter.color}; rotate: ${post.frontmatter.rotation}`}>
-        <img src={post.frontmatter.icon} alt="" />
         {<Fragment set:html={post.compiledContent()}/>}
       </div>
       )

@@ -74,4 +74,10 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
     observer.observe(el);
   });
 
+  document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape' && document.body.classList.contains('popup-opened')) {
+      togglePopup();
+    }
+  });
+
 </script>

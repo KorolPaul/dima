@@ -13,6 +13,12 @@
     padding: 32px 28px 0;
   }
 
+  &_button {
+    @include button;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
   &_title {
     padding: 0 0 80px;
     text-align: left;
@@ -30,7 +36,9 @@
       font-family: $font-family-paradigm;
       font-weight: 300;
       font-size: 33px;
-      font-size: 70px;
+      @include tablet {
+        font-size: 70px;
+      }
     }
   }
 }

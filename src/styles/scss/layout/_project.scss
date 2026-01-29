@@ -48,7 +48,10 @@
     img,
     video {
       max-width: 100%;
-      border-radius: 22px;
+      border-radius: 12px;
+      @include tablet {
+        border-radius: 22px;
+      }
     }
   }
 

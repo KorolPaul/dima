@@ -7,11 +7,12 @@
   bottom: 0;
   z-index: 3;
   transform: translateY(100%);
-  transition: 1s $easeInOutCirc transform .2s,
+  transition: 1s $easeInOutCirc transform .35s,
               .3s $easeInOutCirc background;
 
   .popup-opened & {
     pointer-events: all;
     transform: translateY(0%);
+    transition-delay: .2s;
   }
 }
