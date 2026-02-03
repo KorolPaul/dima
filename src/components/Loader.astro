@@ -85,7 +85,7 @@
           width: "0em",
         },
         {
-          width: "2em",
+          width: "14em",
           duration: 1.25,
         },
         "< 1.25",
@@ -152,7 +152,7 @@
 
     if (growingImage.length) {
       tl2.to(growingImage, {
-        width: "100vw",
+        width: "100.5vw",
         height: "100dvh",
         duration: 2,
       });
@@ -161,7 +161,7 @@
         tl2.to(
           box,
           {
-            width: "calc(100vw + 468px + 475px)",
+            width: "100vw",
             duration: 2,
           },
           "<",
@@ -181,24 +181,10 @@
         );
       }
 
-      if (navLinks.length) {
-        tl2.from(
-          navLinks,
-          {
-            yPercent: 100,
-            duration: 1.25,
-            ease: "expo.out",
-            stagger: 0.1,
-          },
-          "<",
-        );
-      }
-
       let introDone = false;
       let videoReady = false;
 
       const tryStart = () => {
-        console.log(introDone, videoReady);
         if (introDone && videoReady) {
           tl2.play();
           heroVideo.play();
@@ -209,15 +195,14 @@
         console.log("c1");
         introDone = true;
         tryStart();
+        document.body.classList.add('loaded');
       });
 
       if (heroVideo.readyState >= 2) {
-        console.log("c3");
         videoReady = true;
         tryStart();
       } else {
         heroVideo.onloadeddata = function () {
-          console.log("c2");
           videoReady = true;
           tryStart();
         };

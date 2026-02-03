@@ -2,9 +2,15 @@
   display: flex;
   gap: 16px;
   justify-content: space-between;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
 
   & > * {
-    flex: 1 1 0;
-    min-width: 0;
+    @include tablet {
+      flex: 1 1 0;
+      min-width: 0;
+    }
   }
 }
