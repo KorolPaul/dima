@@ -19,15 +19,15 @@ alignTop: true
 <div class="columns">
   <div class="project_media">
     <picture>
-      <source srcset="/images/projects/5-betman/3-context-mobile.png" media="(max-width: 1023px)">
-      <img src="/images/projects/5-betman/3-context.png" alt="">
+      <source srcset="/images/projects/5-betman/3-context-mobile.webp" media="(max-width: 1023px)">
+      <img src="/images/projects/5-betman/3-context.webp" alt="">
     </picture>
     <span class="project_media-label">Context edit</span>
   </div>
   <div class="project_media">
     <picture>
-      <source srcset="/images/projects/5-betman/4-pose-mobile.png" media="(max-width: 1023px)">
-      <img src="/images/projects/5-betman/4-pose.png" alt="">
+      <source srcset="/images/projects/5-betman/4-pose-mobile.webp" media="(max-width: 1023px)">
+      <img src="/images/projects/5-betman/4-pose.webp" alt="">
     </picture>
     <span class="project_media-label">Pose and camera control</span>
   </div>

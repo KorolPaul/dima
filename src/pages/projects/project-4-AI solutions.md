@@ -11,8 +11,8 @@ color: '#fff'
 <h2 class="project_description">I harness the power of artificial intelligence—paired with open-source tools—to craft compelling videos, dynamic characters, and distinctive brand identities, advertising and game art.</h2>
 <div class="project_media">
   <picture>
-    <source srcset="/images/projects/4-ai-solutions/1-written-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/4-ai-solutions/1-written.png" alt="">
+    <source srcset="/images/projects/4-ai-solutions/1-written-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/4-ai-solutions/1-written.webp" alt="">
   </picture>
   <span class="project_media-label" style="color: #000">ComfyUI workflow for creating book covers</span>
 </div>

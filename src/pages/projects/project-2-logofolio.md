@@ -10,128 +10,128 @@ color: '#fff'
 
 <div class="columns">
   <picture>
-    <source srcset="/images/projects/2-logofolio/01-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/01.png" alt="">
+    <source srcset="/images/projects/2-logofolio/01-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/01.webp" alt="">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/02-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/02.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/02-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/02.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/03-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/03.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/03-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/03.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/04-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/04.png" alt="" loading="lazy">
-  </picture>
-</div>
-<div class="columns">
-  <picture>
-    <source srcset="/images/projects/2-logofolio/05-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/05.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/06-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/06.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/07-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/07.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/08-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/08.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/04-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/04.webp" alt="" loading="lazy">
   </picture>
 </div>
 <div class="columns">
   <picture>
-    <source srcset="/images/projects/2-logofolio/09-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/09.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/05-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/05.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/10-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/10.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/06-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/06.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/11-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/11.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/07-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/07.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/12-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/12.png" alt="" loading="lazy">
-  </picture>
-</div>
-<div class="columns">
-  <picture>
-    <source srcset="/images/projects/2-logofolio/13-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/13.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/14-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/14.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/15-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/15.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/16-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/16.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/08-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/08.webp" alt="" loading="lazy">
   </picture>
 </div>
 <div class="columns">
   <picture>
-    <source srcset="/images/projects/2-logofolio/17-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/17.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/09-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/09.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/18-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/18.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/10-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/10.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/19-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/19.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/11-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/11.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/20-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/20.png" alt="" loading="lazy">
-  </picture>
-</div>
-<div class="columns">
-  <picture>
-    <source srcset="/images/projects/2-logofolio/21-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/21.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/22-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/22.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/23-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/23.png" alt="" loading="lazy">
-  </picture>
-  <picture>
-    <source srcset="/images/projects/2-logofolio/24-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/24.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/12-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/12.webp" alt="" loading="lazy">
   </picture>
 </div>
 <div class="columns">
   <picture>
-    <source srcset="/images/projects/2-logofolio/25-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/25.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/13-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/13.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/26-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/26.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/14-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/14.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/27-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/27.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/15-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/15.webp" alt="" loading="lazy">
   </picture>
   <picture>
-    <source srcset="/images/projects/2-logofolio/28-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/2-logofolio/28.png" alt="" loading="lazy">
+    <source srcset="/images/projects/2-logofolio/16-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/16.webp" alt="" loading="lazy">
+  </picture>
+</div>
+<div class="columns">
+  <picture>
+    <source srcset="/images/projects/2-logofolio/17-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/17.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/18-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/18.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/19-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/19.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/20-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/20.webp" alt="" loading="lazy">
+  </picture>
+</div>
+<div class="columns">
+  <picture>
+    <source srcset="/images/projects/2-logofolio/21-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/21.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/22-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/22.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/23-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/23.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/24-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/24.webp" alt="" loading="lazy">
+  </picture>
+</div>
+<div class="columns">
+  <picture>
+    <source srcset="/images/projects/2-logofolio/25-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/25.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/26-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/26.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/27-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/27.webp" alt="" loading="lazy">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/2-logofolio/28-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/2-logofolio/28.webp" alt="" loading="lazy">
   </picture>
 </div>
 

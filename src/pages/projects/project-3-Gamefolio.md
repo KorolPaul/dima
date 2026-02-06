@@ -16,26 +16,26 @@ color: '#A5FCFA'
 <div class="columns">
   <video src="/images/projects/3-gamefolio/3-Busy Brain.webm" muted autoplay playsinline loop></video>
   <picture>
-    <source srcset="/images/projects/3-gamefolio/4-match-out-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/3-gamefolio/4-match-out.png" alt="">
+    <source srcset="/images/projects/3-gamefolio/4-match-out-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/4-match-out.webp" alt="">
   </picture>
   <picture>
-    <source srcset="/images/projects/3-gamefolio/5-bubble-buddy-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/3-gamefolio/5-bubble-buddy.png" alt="">
+    <source srcset="/images/projects/3-gamefolio/5-bubble-buddy-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/5-bubble-buddy.webp" alt="">
   </picture>
   <picture>
-    <source srcset="/images/projects/3-gamefolio/6-tile-star-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/3-gamefolio/6-tile-star.png" alt="">
+    <source srcset="/images/projects/3-gamefolio/6-tile-star-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/6-tile-star.webp" alt="">
   </picture>
 </div>
 <div class="columns">
   <picture>
-    <source srcset="/images/projects/3-gamefolio/7-games-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/3-gamefolio/7-games.png" alt="">
+    <source srcset="/images/projects/3-gamefolio/7-games-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/7-games.webp" alt="">
   </picture>
   <picture>
-    <source srcset="/images/projects/3-gamefolio/8-games-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/3-gamefolio/8-games.png" alt="">
+    <source srcset="/images/projects/3-gamefolio/8-games-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/8-games.webp" alt="">
   </picture>
 </div>
 <div class="columns">
@@ -49,8 +49,8 @@ color: '#A5FCFA'
 <div class="columns">
   <video src="/images/projects/3-gamefolio/13-battle.webm" muted autoplay playsinline loop></video>
   <picture>
-    <source srcset="/images/projects/3-gamefolio/14-tank-wars-mobile.png" media="(max-width: 1023px)">
-    <img src="/images/projects/3-gamefolio/14-tank-wars.png" alt="">
+    <source srcset="/images/projects/3-gamefolio/14-tank-wars-mobile.webp" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/14-tank-wars.webp" alt="">
   </picture>
 </div>
 

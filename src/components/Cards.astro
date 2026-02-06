@@ -4,8 +4,8 @@ const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: tru
 
 <div class="cards-wrapper">
   <div class="cards">
-    {posts.map(post =>
-      <div class="card" style={`background-color: ${post.frontmatter.color}; --degree: ${post.frontmatter.rotation};`}>
+    {posts.map((post, i) =>
+      <div class="card" style={`background-color: ${post.frontmatter.color}; --degree: ${post.frontmatter.rotation}; --index: ${i};`}>
         {<Fragment set:html={post.compiledContent()}/>}
       </div>
       )
@@ -19,7 +19,7 @@ const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: tru
   const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>;
 
   const totalCards = cards.length;
-  const scrollPerCard = window.innerHeight * 1.5; // сколько пикселей скролла на одну карточку
+  const scrollPerCard = window.innerHeight; // сколько пикселей скролла на одну карточку
   const totalScrollHeight = scrollPerCard * totalCards;
 
   // Устанавливаем высоту секции для создания "виртуального" скролла

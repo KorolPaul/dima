@@ -2,6 +2,7 @@
   background: #F2EFEA;
   position: relative;
   z-index: 1;
+  padding-bottom: 220px;
 }
 
 .cards {
@@ -30,17 +31,21 @@
   text-align: center;
   margin-bottom: 16px;
   transform: translateY(calc((1 - var(--progress)) * 500px)) rotate(calc(var(--degree) * (1 - var(--progress))));
-
   transition: all .1s $easingSmooth;
   @include tablet {
-    padding: 100px 90px 70px;
-    gap: 40px;
+    padding: 9dvh 8dvh 7dvh;
+    gap: 3dvh;
     max-width: 594px;
     margin-bottom: 24px;
   }
 
   & ~ & {
-    transform: translateY(calc((1 - var(--progress)) * 500px - 70vh * var(--progress))) rotate(calc(var(--degree) * (1 - var(--progress))));
+    transform: translateY(calc((1 - var(--progress)) * 200px - 35vh * var(--progress) * var(--index))) rotate(calc(var(--degree) * (1 - var(--progress))));
+    margin-top: -50px;
+    @include tablet {
+      transform: translateY(calc((1 - var(--progress)) * 500px - 55vh * var(--progress) * var(--index))) rotate(calc(var(--degree) * (1 - var(--progress))));
+      margin-top: -100px;
+    }
   }
 
   p {
@@ -60,7 +65,7 @@
 
   img {
     @include tablet {
-      margin-bottom: 124px;
+      margin-bottom: 8dvh;
     }
   }
 
