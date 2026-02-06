@@ -1,6 +1,6 @@
 ---
-color: '#E06D3B'
-rotation: '0deg'
+color: '#E47E2A'
+rotation: '8deg'
 ---
 <img src="/images/projects/main/towns.svg" alt="" loading="lazy" width="30%" />
 

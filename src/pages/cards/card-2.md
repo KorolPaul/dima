@@ -1,9 +1,9 @@
 ---
 icon: ''
 color: '#005EFF'
-rotation: '-2deg'
+rotation: '-5deg'
 ---
-<img src="/images/projects/main/ready.png" alt="" loading="lazy" width="75%" />
+<img src="/images/projects/main/ready.svg" alt="" loading="lazy" width="75%" />
 
 <p>Working with clients, agencies and collaborators worldwide, chip&quick.</p>
 <p><span>Fell free for contact with any questions and ideas, will be glad to help. </span></p>

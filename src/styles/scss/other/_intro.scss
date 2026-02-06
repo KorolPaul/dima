@@ -9,8 +9,14 @@
     line-height: 1.2;
     @include tablet {
       padding-bottom: 144px;
+      padding-left: 32px;
+      padding-right: 32px;
       font-size: 68px;
       line-height: 80px;
+    }
+    @include desktop {
+      font-size: 82px;
+      line-height: 96px;
     }
 
     span {
@@ -20,6 +26,10 @@
       line-height: 1.2;
       @include tablet {
         font-size: 70px;
+      }
+      @include desktop {
+        font-size: 82px;
+        line-height: 96px;
       }
     }
   }

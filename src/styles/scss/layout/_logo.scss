@@ -15,6 +15,10 @@
     font-size: 32px;
     line-height: 38px;
   }
+  @include desktop {
+    left: 38px;
+    bottom: 30px;
+  }
 
   &_text {
     @include text-appearance;
@@ -28,7 +32,7 @@
     font-family: $font-family-grit;
     line-height: 30px;
     @include tablet {
-      font-size: 33px;
+      font-size: 34px;
       line-height: 41px;
     }
   }

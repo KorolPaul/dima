@@ -15,7 +15,7 @@
             <div class="willem__growing-image">
               <div class="willem__growing-image-wrap">
                 <video class="willem__cover-image-extra is--1" src="/images/projects/main/main_video_loader.mp4" muted loop autoplay playsinline> Your browser does not support the video tag. </video>
-                <video class="willem__cover-image hero-video" src="/images/projects/main/main_video.mp4" muted loop playsinline> Your browser does not support the video tag. </video>
+                <video class="willem__cover-image hero-video" data-src-desktop="/images/projects/main/main_video.webm" data-src-mobile="/images/projects/main/main_video_mobile.webm" muted loop playsinline> Your browser does not support the video tag. </video>
               </div>
             </div>
           </div>
@@ -44,7 +44,11 @@
     const loadingLetter = container.querySelectorAll(".willem__letter");
     const box = container.querySelectorAll(".willem-loader__box");
     const growingImage = container.querySelectorAll(".willem__growing-image");
-    const heroVideo = document.querySelector(".hero-video");
+    const heroVideo = document.querySelector(".hero-video") as HTMLVideoElement;
+
+    // Выбор видео в зависимости от ширины экрана
+    const isMobile = window.innerWidth <= 768;
+    heroVideo.src = (isMobile ? heroVideo.dataset.srcMobile : heroVideo.dataset.srcDesktop) || "";
     const headingStart = container.querySelectorAll(".willem__h1-start");
     const headingEnd = container.querySelectorAll(".willem__h1-end");
     const coverImageExtra = container.querySelectorAll(".willem__cover-image-extra");

@@ -5,7 +5,7 @@ const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: tru
 <div class="cards-wrapper">
   <div class="cards">
     {posts.map(post =>
-      <div class="card" style={`background-color: ${post.frontmatter.color}; rotate: ${post.frontmatter.rotation}`}>
+      <div class="card" style={`background-color: ${post.frontmatter.color}; --degree: ${post.frontmatter.rotation};`}>
         {<Fragment set:html={post.compiledContent()}/>}
       </div>
       )
@@ -14,43 +14,79 @@ const posts = Object.values(import.meta.glob('../pages/cards/*.md', { eager: tru
 </div>
 
 <script>
-  const section = document.querySelector('.cards-wrapper');
-  const cardsContainer = document.querySelector('.cards');
-  const cards = document.querySelectorAll('.card');
+  const section = document.querySelector('.cards-wrapper') as HTMLElement;
+  const cardsContainer = document.querySelector('.cards') as HTMLElement;
+  const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>;
 
-  // Настройка: сколько пикселей скролла нужно для переключения одной карточки
-  // Можно использовать window.innerHeight для скролла "по экранам"
-  const stepHeight = window.innerHeight;
+  const totalCards = cards.length;
+  const scrollPerCard = window.innerHeight * 1.5; // сколько пикселей скролла на одну карточку
+  const totalScrollHeight = scrollPerCard * totalCards;
 
-  // Устанавливаем высоту родителя:
-  // (кол-во карточек * высоту шага) + еще немного места для плавности
-  section.style.height = `${stepHeight * (cards.length + 1)}px`;
+  // Устанавливаем высоту секции для создания "виртуального" скролла
+  section.style.height = `${totalScrollHeight + window.innerHeight}px`;
 
-  window.addEventListener('scroll', () => {
-      // Получаем позицию секции относительно верха вьюпорта
-      const sectionTop = section.getBoundingClientRect().top;
+  cards.forEach(card => {
+    card.style.setProperty('--progress', '0');
+  });
 
-      // Вычисляем, сколько пикселей мы проскроллили ВНУТРИ секции.
-      // Так как sectionTop становится отрицательным при скролле вниз, инвертируем его.
-      const scrolledInside = -sectionTop;
+  function updateCardsProgress() {
+    const sectionRect = section.getBoundingClientRect();
+    const sectionTop = -sectionRect.top; // сколько проскроллено от начала секции
 
-      if (scrolledInside < 0) {
-          // Мы еще не дошли до блока
-          cards.forEach(card => card.classList.remove('active'));
-          return;
+    // Если секция ещё не началась
+    if (sectionTop < 0) {
+      cards.forEach(card => card.style.setProperty('--progress', '0'));
+      return;
+    }
+
+    // Если секция полностью пройдена
+    if (sectionTop >= totalScrollHeight) {
+      cards.forEach(card => card.style.setProperty('--progress', '1'));
+      return;
+    }
+
+    // Вычисляем progress для каждой карточки
+    cards.forEach((card, index) => {
+      const cardStart = index * scrollPerCard;
+      const cardEnd = cardStart + scrollPerCard;
+
+      let progress = 0;
+      if (sectionTop >= cardEnd) {
+        progress = 1;
+      } else if (sectionTop > cardStart) {
+        progress = (sectionTop - cardStart) / scrollPerCard;
       }
 
-      // Перебираем карточки и проверяем, пора ли их активировать
-      cards.forEach((card, index) => {
-          // Порог срабатывания для каждой карточки
-          // +1 чтобы первая карточка активировалась не мгновенно, а чуть проскроллив
-          const threshold = stepHeight * index;
+      card.style.setProperty('--progress', progress.toString());
+    });
+  }
 
-          if (scrolledInside > threshold) {
-              card.classList.add('active');
-          } else {
-              card.classList.remove('active');
-          }
-      });
-  });
+  // Фиксируем контейнер с карточками при скролле
+  function updateStickyPosition() {
+    const sectionRect = section.getBoundingClientRect();
+
+    if (sectionRect.top <= 0 && sectionRect.bottom > window.innerHeight) {
+      cardsContainer.style.position = 'fixed';
+      cardsContainer.style.top = '0';
+      cardsContainer.style.left = '0';
+      cardsContainer.style.width = '100%';
+    } else if (sectionRect.bottom <= window.innerHeight) {
+      cardsContainer.style.position = 'absolute';
+      cardsContainer.style.top = `${totalScrollHeight}px`;
+      cardsContainer.style.left = '0';
+      cardsContainer.style.width = '100%';
+    } else {
+      cardsContainer.style.position = 'relative';
+      cardsContainer.style.top = '0';
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    updateCardsProgress();
+    updateStickyPosition();
+  }, { passive: true });
+
+  // Инициализация
+  updateCardsProgress();
+  updateStickyPosition();
 </script>

@@ -10,7 +10,7 @@
   position: relative;
   z-index: 2;
   @include tablet {
-    padding: 32px 28px 0;
+    padding: 32px 32px 0;
   }
 
   &_button {
@@ -20,16 +20,18 @@
   }
 
   &_title {
-    padding: 0 0 80px;
     text-align: left;
     font-weight: 400;
     font-size: 32px;
     line-height: 1.2;
     margin: 0;
     @include tablet {
-      padding-bottom: 144px;
       font-size: 68px;
       line-height: 80px;
+    }
+    @include desktop {
+      font-size: 82px;
+      line-height: 96px;
     }
 
     span {
@@ -39,6 +41,10 @@
       line-height: 1.2;
       @include tablet {
         font-size: 70px;
+      }
+      @include desktop {
+        font-size: 82px;
+        line-height: 96px;
       }
     }
   }

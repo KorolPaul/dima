@@ -1,7 +1,7 @@
 ---
 icon: ''
 color: '#73B248'
-rotation: '3deg'
+rotation: '8deg'
 ---
 <img src="/images/projects/main/art-tech.svg" alt="" loading="lazy" width="75%" />
 

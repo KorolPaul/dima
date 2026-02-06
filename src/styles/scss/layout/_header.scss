@@ -8,6 +8,12 @@
   mix-blend-mode: difference;
   @include tablet {
     top: 10px;
+    left: 20px;
+    right: 20px;
+  }
+  @include desktop {
+    left: 38px;
+    right: 38px;
   }
 
   &_holder {
