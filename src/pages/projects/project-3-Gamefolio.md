@@ -15,13 +15,28 @@ color: '#A5FCFA'
 </div>
 <div class="columns">
   <video src="/images/projects/3-gamefolio/3-Busy Brain.webm" muted autoplay playsinline loop></video>
-  <img src="/images/projects/3-gamefolio/4-match-out.png" alt="" loading="lazy" />
-  <img src="/images/projects/3-gamefolio/5-bubble-buddy.png" alt="" loading="lazy" />
-  <img src="/images/projects/3-gamefolio/6-tile-star.png" alt="" loading="lazy" />
+  <picture>
+    <source srcset="/images/projects/3-gamefolio/4-match-out-mobile.png" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/4-match-out.png" alt="">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/3-gamefolio/5-bubble-buddy-mobile.png" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/5-bubble-buddy.png" alt="">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/3-gamefolio/6-tile-star-mobile.png" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/6-tile-star.png" alt="">
+  </picture>
 </div>
 <div class="columns">
-  <img src="/images/projects/3-gamefolio/7-games.png" alt="" loading="lazy" />
-  <img src="/images/projects/3-gamefolio/8-games.png" alt="" loading="lazy" />
+  <picture>
+    <source srcset="/images/projects/3-gamefolio/7-games-mobile.png" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/7-games.png" alt="">
+  </picture>
+  <picture>
+    <source srcset="/images/projects/3-gamefolio/8-games-mobile.png" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/8-games.png" alt="">
+  </picture>
 </div>
 <div class="columns">
   <video src="/images/projects/3-gamefolio/9-syone.mp4" muted autoplay playsinline loop></video>
@@ -33,7 +48,10 @@ color: '#A5FCFA'
 </div>
 <div class="columns">
   <video src="/images/projects/3-gamefolio/13-battle.webm" muted autoplay playsinline loop></video>
-  <img src="/images/projects/3-gamefolio/14-tank-wars.png" alt="" loading="lazy" />
+  <picture>
+    <source srcset="/images/projects/3-gamefolio/14-tank-wars-mobile.png" media="(max-width: 1023px)">
+    <img src="/images/projects/3-gamefolio/14-tank-wars.png" alt="">
+  </picture>
 </div>
 
 
