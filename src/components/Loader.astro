@@ -46,9 +46,6 @@
     const growingImage = container.querySelectorAll(".willem__growing-image");
     const heroVideo = document.querySelector(".hero-video") as HTMLVideoElement;
 
-    // Выбор видео в зависимости от ширины экрана
-    const isMobile = window.innerWidth <= 768;
-    heroVideo.src = (isMobile ? heroVideo.dataset.srcMobile : heroVideo.dataset.srcDesktop) || "";
     const headingStart = container.querySelectorAll(".willem__h1-start");
     const headingEnd = container.querySelectorAll(".willem__h1-end");
     const coverImageExtra = container.querySelectorAll(".willem__cover-image-extra");

@@ -12,7 +12,7 @@ alignTop: true
 <div>
   <video src="/images/projects/5-betman/1-man.webm" muted autoplay playsinline loop class="project_men"></video>
   <div class="project_media">
-    <video src="/images/projects/5-betman/2-poses.webm" muted autoplay playsinline loop></video>
+    <video data-src-desktop="/images/projects/5-betman/2-poses.webm" data-src-mobile="/images/projects/5-betman/2-poses-mobile.webm"  muted autoplay playsinline loop></video>
     <span class="project_media-label">Character generation</span>
   </div>
 </div>

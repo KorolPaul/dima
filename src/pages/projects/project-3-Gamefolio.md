@@ -39,7 +39,7 @@ color: '#A5FCFA'
   </picture>
 </div>
 <div class="columns">
-  <video src="/images/projects/3-gamefolio/9-syone.mp4" muted autoplay playsinline loop></video>
+  <video src="/images/projects/3-gamefolio/9-syone.webm" muted autoplay playsinline loop></video>
   <video src="/images/projects/3-gamefolio/10-excalibur.webm" muted autoplay playsinline loop></video>
 </div>
 <div class="columns">

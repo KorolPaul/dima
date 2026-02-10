@@ -7,7 +7,8 @@
     <meta name="generator" content={Astro.generator} />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Dmitry Zelinsky</title>
   </head>
   <body>
@@ -50,6 +51,16 @@
 
     <footer class="footer">
     </footer>
+
+    <script is:inline src="/js/lenis.min.js"></script>
+    <script is:inline>
+      const lenis = new Lenis({
+        autoRaf: true,
+      });
+
+      const isMobile = window.innerWidth <= 768;
+      document.querySelectorAll('video[data-src-mobile]')?.forEach((el) => el.src = (isMobile ? el.dataset.srcMobile : el.dataset.srcDesktop) || "");
+    </script>
   </body>
 </html>
 

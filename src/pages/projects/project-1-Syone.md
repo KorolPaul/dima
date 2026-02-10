@@ -18,7 +18,7 @@ iconWithoutIndent: true
   <source srcset="/images/projects/1-syone/2-mobile.webp" media="(max-width: 1023px)">
   <img src="/images/projects/1-syone/2.webp" alt="" loading="lazy">
 </picture>
-<video src="/images/projects/1-syone/3.webm" muted autoplay playsinline loop></video>
+<video data-src-desktop="/images/projects/1-syone/3.webm" data-src-mobile="/images/projects/1-syone/3-mobile.webm" muted autoplay playsinline loop></video>
 <picture>
   <source srcset="/images/projects/1-syone/4-mobile.webp" media="(max-width: 1023px)">
   <img src="/images/projects/1-syone/4.webp" alt="" loading="lazy">

@@ -17,7 +17,7 @@ color: '#fff'
   <span class="project_media-label" style="color: #000">ComfyUI workflow for creating book covers</span>
 </div>
 <div class="project_media">
-  <video src="/images/projects/4-ai-solutions/2-betman.webm" muted autoplay playsinline loop></video>
+  <video data-src-desktop="/images/projects/4-ai-solutions/2-betman.webm" data-src-mobile="/images/projects/4-ai-solutions/2-betman-mobile.webm" muted autoplay playsinline loop></video>
   <span class="project_media-label">Using AI to develop an advertising campaign for print and online advertising </span>
 </div>
 <div class="columns">
@@ -31,6 +31,6 @@ color: '#fff'
   </div>
 </div>
 <div class="project_media">
-  <video src="/images/projects/4-ai-solutions/5-characters.mp4" muted autoplay playsinline loop></video>
+  <video data-src-desktop="/images/projects/4-ai-solutions/5-characters.webm" data-src-mobile="/images/projects/4-ai-solutions/5-characters-mobile.webm" muted autoplay playsinline loop></video>
   <span class="project_media-label">Characters for various game projects</span>
 </div>

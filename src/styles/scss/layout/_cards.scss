@@ -2,7 +2,10 @@
   background: #F2EFEA;
   position: relative;
   z-index: 1;
-  padding-bottom: 220px;
+  padding-bottom: 80px;
+  @include tablet {
+    padding-bottom: 220px;
+  }
 }
 
 .cards {
