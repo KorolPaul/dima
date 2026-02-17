@@ -92,10 +92,27 @@
 }
 
 @mixin text-appearance {
-  transition: .9s $easeOutCirc translate 3s;
-  translate: 0 100%;
+  opacity: 0;
+  translate: 0 50%;
 
   .loaded & {
-    translate: 0 0;
+    animation: text-appearance 0.75s $easeInCirc forwards;
+  }
+}
+
+@keyframes text-appearance {
+  0% {
+    opacity: 0;
+    translate: 0 50%;
+  }
+
+  60% {
+    opacity: 0;
+    translate: 0 20%;
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0%;
   }
 }

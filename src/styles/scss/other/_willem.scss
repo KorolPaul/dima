@@ -109,37 +109,12 @@ main:has(.willem-header.is--loading) {
 .willem__cover-image {
   pointer-events: none;
   object-fit: cover;
-  -webkit-user-select: none;
   user-select: none;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.willem__cover-image-extra {
-  pointer-events: none;
-  object-fit: cover;
-  -webkit-user-select: none;
-  user-select: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-.willem__cover-image-extra.is--1 {
-  z-index: 3;
-}
-
-.willem__cover-image-extra.is--2 {
-  z-index: 2;
-}
-
-.willem__cover-image-extra.is--3 {
   z-index: 1;
 }
 

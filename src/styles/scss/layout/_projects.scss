@@ -1,6 +1,9 @@
 .projects {
   position: relative;
-  z-index: 2;
+
+  &[data-scalable="true"] {
+    background-color: #2A2828;
+  }
 
   .popup & {
     padding: 0;

@@ -1,0 +1,214 @@
+<section class="showcase">
+  <div class="willem-header is--loading is--hidden">
+    <div class="willem-loader">
+      <div class="willem__h1">
+        <div class="willem__h1-start">
+          <span class="willem__letter">D</span>
+          <span class="willem__letter">m</span>
+          <span class="willem__letter">i</span>
+          <span class="willem__letter">t</span>
+          <span class="willem__letter">r</span>
+          <span class="willem__letter">y</span>
+        </div>
+        <div class="willem-loader__box">
+          <div class="willem-loader__box-inner">
+            <div class="willem__growing-image">
+              <div class="willem__growing-image-wrap">
+                <video class="willem__cover-image hero-video" muted loop playsinline autoplay>
+                    <source src="/images/projects/main/main_video.webm" type="video/webm" media="(min-width: 768px)">
+                    <source src="/images/projects/main/main_video_mobile.webm" type="video/webm">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="willem__h1-end">
+          <span class="willem__letter">Z</span>
+          <span class="willem__letter">e</span>
+          <span class="willem__letter">l</span>
+          <span class="willem__letter">i</span>
+          <span class="willem__letter">n</span>
+          <span class="willem__letter">s</span>
+          <span class="willem__letter">k</span>
+          <span class="willem__letter">y</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" is:inline></script>
+
+<script>
+  // ------- Osmo [https://osmo.supply/] ------- //
+
+  function initWillemLoadingAnimation() {
+    const container = document.querySelector(".willem-header");
+    const loadingLetter = container.querySelectorAll(".willem__letter");
+    const box = container.querySelectorAll(".willem-loader__box");
+    const growingImage = container.querySelectorAll(".willem__growing-image");
+    const heroVideo = document.querySelector(".hero-video") as HTMLVideoElement;
+
+    const headingStart = container.querySelectorAll(".willem__h1-start");
+    const headingEnd = container.querySelectorAll(".willem__h1-end");
+    const headerLetter = container.querySelectorAll(".willem__letter-white");
+    const navLinks = container.querySelectorAll(".willen-nav a, .osmo-credits__p");
+
+    /* GSAP Timeline */
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "expo.inOut",
+      },
+      onStart: () => {
+        container.classList.remove("is--hidden");
+        container.classList.add("is--start");
+      },
+
+    });
+
+    const tl2 = gsap.timeline({
+      defaults: {
+        ease: "expo.inOut",
+      },
+      paused: true,
+    });
+
+    /* Start of Timeline */
+    if (loadingLetter) {
+      tl.from(loadingLetter, {
+        yPercent: 100,
+        stagger: 0.025,
+        duration: 1.25,
+      });
+    }
+
+    if (box.length) {
+      tl.fromTo(
+        box,
+        {
+          width: "0em",
+        },
+        {
+          width: "14em",
+          duration: 1.25,
+        },
+        "< 1.25",
+      );
+    }
+
+    if (box.length) {
+      tl.fromTo(
+        growingImage,
+        {
+          width: "0%",
+        },
+        {
+          width: "100%",
+          duration: 1.25,
+        },
+        "<",
+      );
+    }
+
+    if (headingStart.length) {
+      tl.fromTo(
+        headingStart,
+        {
+          x: "0em",
+        },
+        {
+          x: "-0.05em",
+          duration: 1.25,
+        },
+        "<",
+      );
+    }
+
+    if (headingEnd.length) {
+      tl.fromTo(
+        headingEnd,
+        {
+          x: "0em",
+        },
+        {
+          x: "0.05em",
+          duration: 1.25,
+        },
+        "<",
+      );
+    }
+
+    if (growingImage.length) {
+      tl2.to(growingImage, {
+        width: "100.5vw",
+        height: "100dvh",
+        duration: 2,
+      });
+
+      if (box.length) {
+        tl2.to(
+          box,
+          {
+            width: "100vw",
+            duration: 2,
+          },
+          "<",
+        );
+      }
+
+      if (headerLetter.length) {
+        tl2.from(
+          headerLetter,
+          {
+            yPercent: 100,
+            duration: 1.25,
+            ease: "expo.out",
+            stagger: 0.025,
+          },
+          "< 1.2",
+        );
+      }
+
+      let introDone = false;
+      let videoReady = false;
+
+      const tryStart = () => {
+        if (introDone && videoReady) {
+          tl2.play();
+          heroVideo.play();
+        }
+      };
+
+      tl.eventCallback("onComplete", () => {
+        console.log("c1");
+        introDone = true;
+        tryStart();
+        document.body.classList.add('loaded');
+      });
+
+      if (heroVideo.readyState >= 2) {
+        videoReady = true;
+        tryStart();
+      } else {
+        heroVideo.onloadeddata = function () {
+          videoReady = true;
+          tryStart();
+        };
+      }
+
+      //     heroVideo.addEventListener('loadeddata', () => {
+
+      //     });
+
+      //       heroVideo.addEventListener('canplay', () => {
+      //   console.log('Видео загружено, первый кадр доступен');
+      //          tl2.play();
+
+      // });
+    }
+  }
+
+  // Initialize Willem Loading Animation
+  document.addEventListener("DOMContentLoaded", () => {
+    initWillemLoadingAnimation();
+  });
+</script>

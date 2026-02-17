@@ -26,7 +26,7 @@
     padding: 4px 12px 6px;
     transition: .2s background-color $easing,
                 .3s transform $easing,
-                .7s translate $easeInOutCirc 1.5s,
+                .5s $easeOutCirc opacity,
                 .3s color $easing;
     @include tablet {
       font-size: 28px;
@@ -45,7 +45,7 @@
 
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
-        transition-delay: #{1.5s + ($i * .1s)};
+        animation-delay: #{($i * .1s)};
       }
     }
   }

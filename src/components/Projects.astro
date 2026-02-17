@@ -3,12 +3,13 @@ import Project from './Project.astro';
 
 const {
   withBackground = false,
+  withScale = false,
 } = Astro.props;
 
 const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: true }));
 ---
 
-<div class="projects">
+<div class="projects" data-scalable={withScale}>
   <div class="projects_holder">
     {posts.map(post =>
       <Project
@@ -26,3 +27,42 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
     }
   </div>
 </div>
+
+<script>
+  const scalableProducts = document.querySelector('.projects[data-scalable="true"]');
+
+  if (scalableProducts && window.innerWidth >= 1000) {
+    const project = scalableProducts.querySelector('.project') as HTMLElement;
+    const threshold = window.innerHeight * 0.7;
+
+    window.addEventListener('scroll', () => {
+      const top = project.parentElement?.getBoundingClientRect().top ?? 0;
+      const visibleOffset = window.innerHeight - top;
+
+      scalableProducts.style.setProperty('z-index', visibleOffset > -500 ? '2' : '-1');
+
+      if (visibleOffset <= 0) {
+        project.style.setProperty('scale', '0.76');
+        project.style.setProperty('opacity', '0.5');
+        return;
+      }
+
+      const progress = Math.min(visibleOffset / threshold, 1);
+      const scale = 0.76 + progress * (1 - 0.76);
+      const opacity = 0.5 + progress * (1 - 0.5);
+
+      if (scale >= 1) {
+        project.style.setProperty('position', 'relative');
+        project.style.setProperty('top', '0');
+        project.parentElement?.style.setProperty('padding-top', 0);
+      } else {
+        project.style.setProperty('position', 'fixed');
+        project.style.setProperty('top', '30dvh');
+        project.parentElement?.style.setProperty('padding-top', `${project.offsetHeight}px`);
+      }
+
+      project.style.setProperty('scale', String(scale));
+      project.style.setProperty('opacity', String(opacity));
+    });
+  }
+</script>

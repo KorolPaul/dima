@@ -3,6 +3,9 @@
   padding-top: 80px;
   padding-bottom: 80px;
   max-width: none;
+  position: relative;
+  z-index: 1;
+  background: $cLight;
   @include tablet {
     padding: 120px 32px 144px;
   }

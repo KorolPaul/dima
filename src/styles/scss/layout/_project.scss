@@ -8,6 +8,8 @@
   padding: 28px 16px;
   box-sizing: border-box;
   position: relative;
+  transform-origin: center;
+  left: 0;
 
   &__small {
     width: 20%;
