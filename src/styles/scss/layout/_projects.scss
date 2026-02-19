@@ -1,5 +1,9 @@
 .projects {
   position: relative;
+  z-index: 3;
+  @include tablet {
+    z-index: initial;
+  }
 
   &[data-scalable="true"] {
     background-color: #2A2828;

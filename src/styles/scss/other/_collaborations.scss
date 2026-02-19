@@ -1,0 +1,83 @@
+.collaborations {
+  display: flex;
+  background: #F2EFEA;
+  flex-direction: column;
+  gap: 80px;
+  padding: 80px 16px;
+  @include desktop {
+    gap: 144px;
+    padding-top: 144px;
+    padding-bottom: 144px;
+  }
+
+  &_item {
+    font-family: $font-family-grit;
+    font-size: 26px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: -2%;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      font-size: 34px;
+      line-height: 40px;
+    }
+    @include desktop {
+      gap: 50px;
+    }
+
+    &:nth-child(even) {
+      text-align: right;
+      align-items: flex-end;
+      @include tablet {
+        align-items: center;
+      }
+
+      div:nth-child(2) {
+        @include tablet {
+          text-align: left;
+        }
+      }
+    }
+
+    div {
+      @include tablet {
+        width: calc(50% - 30px);
+        max-width: 365px;
+      }
+      @include desktop {
+        width: calc(50% - 50px);
+        max-width: 625px;
+      }
+    }
+
+
+    h2 {
+      font-family: $font-family;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      @include tablet {
+        font-size: 48px;
+        line-height: 52px;
+      }
+    }
+  }
+
+  &_link {
+    @include button;
+  }
+
+  &_footer {
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    max-width: 480px;
+  }
+}

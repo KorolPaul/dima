@@ -1,0 +1,31 @@
+.letters {
+}
+
+.word {
+  overflow: hidden;
+  padding-bottom: 0.05em;
+  margin-bottom: -0.05em;
+  transform-origin: bottom;
+  display: inline-block;
+}
+
+.line {
+  display: inline-block;
+  translate: 0 50%;
+  opacity: 0;
+  letter-spacing: -2%;
+  white-space: nowrap;
+  transition: .3s ease-in-out opacity,
+              .3s ease-in-out translate;
+
+  .active & {
+    translate: 0 0;
+    opacity: 1;
+  }
+
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      transition-delay: #{($i * .1s)};
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<div class="collaborations">
+    <div class="collaborations_item">
+      <div></div>
+      <div>
+        <p class="letters">Welcome long-term collaborations with gaming and creative studios, leveraging over <span>10 years of cross-disciplinary experience in art and technology.</span></p>
+      </div>
+    </div>
+    <div class="collaborations_item">
+      <div>
+        <p class="letters">Fell free for contact with any questions <span>and ideas, will be glad to help.</span> </p>
+      </div>
+      <div>
+        <a class="collaborations_link" href="https://t.me/korolpaul" target="_blank">let’s chat</a>
+      </div>
+    </div>
+    <div class="collaborations_item">
+      <div>
+
+      </div>
+      <div>
+        <h2 class="letters">Working with agencies, collaborators and clients worldwide. </h2>
+      </div>
+    </div>
+
+    <p class="collaborations_footer letters">I’ve worked at companies such as Wargaming, Mail.ru Group, Art. Lebedev Studio, x-flow. Works has earned by Logolounge and Awwwards. </p>
+</div>
+
+<script is:inline>
+  function wrapLetters(el) {
+    var words = el.textContent.trim().split(/\s+/);
+
+    el.innerHTML = '';
+    words.forEach(function(word, i) {
+      if (i > 0) el.appendChild(document.createTextNode(' '));
+      var span = document.createElement('span');
+      span.textContent = word;
+      el.appendChild(span);
+    });
+
+    var spans = Array.from(el.children);
+    var lines = [];
+    var currentLine = [];
+    var currentTop = null;
+
+    spans.forEach(function(span) {
+      var top = span.offsetTop;
+      if (currentTop === null) currentTop = top;
+      if (top !== currentTop) {
+        lines.push(currentLine);
+        currentLine = [];
+        currentTop = top;
+      }
+      currentLine.push(span.textContent);
+    });
+    if (currentLine.length) lines.push(currentLine);
+
+    el.innerHTML = '';
+    lines.forEach(function(lineWords) {
+      var lineEl = document.createElement('span');
+      lineEl.className = 'line';
+      lineEl.textContent = lineWords.join(' ');
+      el.appendChild(lineEl);
+    });
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.letters').forEach(function(el) {
+    if (el.closest('.letters') !== el) return;
+    wrapLetters(el);
+    observer.observe(el);
+  });
+</script>
+
