@@ -6,6 +6,7 @@ thumbnailSmall: '/images/projects/main/cards/3-gamefolio/logo-small.svg'
 thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#191717'
 color: '#A5FCFA'
+href: 'gamefolio'
 ---
 
 <h2 class="project_description">With over a decade of experience in the game industry, I’ve contributed to projects ranging from hyper-casual titles to large scale online games.</h2>

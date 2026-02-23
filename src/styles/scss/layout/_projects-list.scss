@@ -61,9 +61,11 @@
 
   &_item-video {
     flex-grow: 1;
+    border-radius: 10px;
     @include tablet {
       width: 75%;
       flex-basis: 75%;
+      border-radius: 20px;
     }
 
     video {

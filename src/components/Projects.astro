@@ -22,6 +22,7 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
         alignTop={post.frontmatter.alignTop}
         content={post.compiledContent()}
         withBackground={withBackground}
+        href={post.frontmatter.href}
       />
       )
     }

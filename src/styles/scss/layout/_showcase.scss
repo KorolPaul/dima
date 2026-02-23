@@ -8,17 +8,19 @@
   z-index: 2;
 
   &_video {
-    animation: video-appearance 3s ease-in forwards;
-    animation-play-state: paused;
+    // animation: video-appearance 3s ease-in forwards;
+    // animation-play-state: paused;
     width: 100%;
     height: 100dvh;
     object-fit: cover;
     pointer-events: none;
     border-radius: 22px;
+    will-change: transform;
+    scale: 0.63;
 
-    .ready & {
-      animation-play-state: running;
-    }
+    // .ready & {
+    //   animation-play-state: running;
+    // }
   }
 
   &_name,
@@ -29,14 +31,16 @@
     z-index: 2;
     left: 50%;
 
+    display: none;
+
     .ready & {
       animation-play-state: running;
     }
   }
 
   &_name {
-    animation: name-appearance 3s ease-in forwards;
-    animation-play-state: paused;
+    // animation: name-appearance 3s ease-in forwards;
+    // animation-play-state: paused;
     font-size: 32px;
     translate: -120px -50%;
     @include desktop {
@@ -45,8 +49,8 @@
   }
 
   &_surname {
-    animation: surname-appearance 3s ease-in forwards;
-    animation-play-state: paused;
+    // animation: surname-appearance 3s ease-in forwards;
+    // animation-play-state: paused;
     font-family: $font-family-grit;
     font-size: 34px;
     translate: 35px -50%;

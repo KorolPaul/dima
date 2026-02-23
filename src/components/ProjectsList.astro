@@ -28,7 +28,14 @@ const posts = Object.values(import.meta.glob('../pages/projects/*.md', { eager: 
   function togglePopup(e?: Event) {
     e?.preventDefault();
 
+    const isOpening = !document.body.classList.contains('popup-opened');
     document.body.classList.toggle('popup-opened');
+
+    if (isOpening) {
+      window.lenis?.stop();
+    } else {
+      window.lenis?.start();
+    }
   }
 
   document.querySelectorAll('.js-popup-toggle').forEach((el) => el.addEventListener('click', togglePopup));

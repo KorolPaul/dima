@@ -29,5 +29,11 @@
 
 
   &_holder {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    @include tablet {
+      gap: 600px;
+    }
   }
 }

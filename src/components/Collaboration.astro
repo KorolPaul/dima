@@ -74,7 +74,8 @@
 
   document.querySelectorAll('.letters').forEach(function(el) {
     if (el.closest('.letters') !== el) return;
-    wrapLetters(el);
+
+    setTimeout(() => wrapLetters(el), 100);
     observer.observe(el);
   });
 </script>

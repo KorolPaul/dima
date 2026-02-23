@@ -38,15 +38,39 @@
   }
 
   &_line {
-
+    padding: 0 16px;
+    overflow: hidden;
+    @include tablet {
+      gap: 56px;
+      padding-left: 32px;
+      padding-right: 32px;
+      margin: 0;
+    }
   }
 
   &_logos {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 38px;
     @include tablet {
       gap: 56px;
+      margin: 0;
+    }
+  }
+
+  &_logo {
+    &__tablet {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+    &__desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
     }
   }
 }

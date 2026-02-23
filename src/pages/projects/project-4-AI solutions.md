@@ -6,6 +6,7 @@ thumbnailSmall: '/images/projects/main/cards/4-ai-solutions/logo-small.svg'
 thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#1D2B2B'
 color: '#fff'
+href: 'ai-solutions'
 ---
 
 <h2 class="project_description">I harness the power of artificial intelligence—paired with open-source tools—to craft compelling videos, dynamic characters, and distinctive brand identities, advertising and game art.</h2>

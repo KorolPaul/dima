@@ -21,7 +21,7 @@
   }
 
   &_text {
-    @include text-appearance;
+    // @include text-appearance;
 
     .loaded & {
       animation-delay: 1s;

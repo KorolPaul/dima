@@ -7,6 +7,7 @@ thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
 background: '#2A2828'
 color: '#fff'
 iconWithoutIndent: true
+href: 'syone'
 ---
 
 <h2 class="project_description project_description__absolute">PVP project for web and mobile crypto games set in a Wild West-inspired world, with whiskey and blackjack.</h2>

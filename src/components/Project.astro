@@ -10,6 +10,7 @@ const {
   withBackground = false,
   alignTop = false,
   small,
+  href,
 } = Astro.props;
 
 ---
@@ -20,6 +21,7 @@ const {
   data-color={background}
   style={`color: ${color}; background-color: ${withBackground ? background: 'transparent'}`}
 >
+  {withBackground && <a name={href}></a>}
 	<img src={thumbnail} alt="" class={`project_image ${iconWithoutIndent ? 'project_image__without-indent' : ''}`}>
 
   {small && <button class="project_more">explore <span>case</span></button>}

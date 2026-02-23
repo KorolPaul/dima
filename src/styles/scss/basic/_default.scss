@@ -36,6 +36,11 @@ a {
   }
 }
 
+a[name] {
+  position: relative;
+  bottom: 50px;
+}
+
 p {
   margin: 0 0 20px;
 }
