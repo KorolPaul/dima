@@ -15,7 +15,9 @@
     flex-direction: column;
     gap: 74px;
     @include tablet {
-      gap: 144px;
+      gap: 20px;
+      flex-direction: row;
+      overflow: auto;
     }
   }
 
@@ -23,11 +25,9 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 30px;
+    justify-content: start;
     @include tablet {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 60px;
+      gap: 18px;
     }
   }
 
@@ -39,8 +39,6 @@
     flex-grow: 0;
     flex-shrink: 0;
     @include tablet {
-      width: 20%;
-      min-width: 460px;
     }
   }
 
@@ -62,14 +60,16 @@
   &_item-video {
     flex-grow: 1;
     @include tablet {
-      width: 75%;
-      flex-basis: 75%;
+      width: 300px;
+      max-height: 400px;
     }
 
     video {
       width: 100%;
       border-radius: 10px;
       @include tablet {
+        height: 100%;
+        object-fit: cover;
         border-radius: 20px;
       }
     }

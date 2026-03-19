@@ -3,7 +3,7 @@ title: 'Betman'
 subtitle: 'An advertising campaign for sports betting, <span>created entirely using artificial intelligence</span>'
 thumbnail: '/images/projects/main/cards/5-betman/logo.svg'
 thumbnailSmall: '/images/projects/main/cards/5-betman/logo-small.svg'
-thumbnailVideo: '/images/projects/main/cards/1-syone/thumbnail.mp4'
+thumbnailVideo: '/images/projects/5-betman/preview.webm'
 background: '#222124'
 color: '#F5E920'
 alignTop: true
