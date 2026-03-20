@@ -17,6 +17,7 @@
     @include tablet {
       gap: 20px;
       flex-direction: row;
+      justify-content: space-between;
       overflow: auto;
     }
   }
@@ -28,6 +29,7 @@
     justify-content: start;
     @include tablet {
       gap: 18px;
+      width: 300px;
     }
   }
 
@@ -47,10 +49,6 @@
     font-size: 24px;
     line-height: 29px;
     margin: 0;
-    @include desktop {
-      font-size: 34px;
-      line-height: 41px;
-    }
   }
 
   &_item-icon {
@@ -59,7 +57,10 @@
 
   &_item-video {
     flex-grow: 1;
+    border-radius: 10px;
+    overflow: hidden;
     @include tablet {
+      border-radius: 20px;
       width: 300px;
       max-height: 400px;
     }
