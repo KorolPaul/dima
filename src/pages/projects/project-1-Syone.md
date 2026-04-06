@@ -10,7 +10,7 @@ iconWithoutIndent: true
 href: 'syone'
 ---
 
-<h2 class="project_description project_description__absolute">PVP project for web and mobile crypto games set in a Wild West-inspired world, with whiskey and blackjack.</h2>
+<h2 class="project_description">PVP project for web and mobile crypto games set in a Wild West-inspired world, with whiskey and blackjack.</h2>
 <picture>
   <source srcset="/images/projects/1-syone/1-mobile.webp" media="(max-width: 1023px)">
   <img src="/images/projects/1-syone/1.webp" alt="">
